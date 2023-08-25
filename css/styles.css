@@ -1,83 +1,76 @@
-* {
-    font-family: 'Roboto', sans-serif;
-    text-decoration: none;
-    color: black;
-    margin:0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
-
-
-:root {
-    --main-bg-color:#f6f6f6;
-    --body-font:'Roboto', sans-serif;
-
-}
-
-
 .main-container {
-    display: flex;
-    width: 100%;
-    max-width: 768px;
-    box-sizing: border-box;
-    flex-wrap: wrap;
-    margin: 0px;
+  display: flex;
+  width: 100%;
+  max-width: 768px;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  margin: 0px;
 }
-
-
-/* body { 
-    display:flex;
-    justify-content: center;
-    margin: 0px;
-    padding: 0px;
-} */
-
 
 .en-tete {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 14px 89px 13px 80px;
-    height: 63px;
-    width: 100%;
-    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 14px 89px 13px 80px;
+  height: 63px;
+  width: 100%;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 }
-
-
 .en-tete img {
-    width: 162px;
-    height: 44px;
-    padding: 0px;
+  width: 162px;
+  height: 44px;
+  padding: 0px;
 }
-
 
 .localisation {
-    display: flex;
-    height: 50px;
-    width: 100%;
-    background-color: #eaeaea;
-    align-items: center;
-    justify-content: center;
-    gap: 17px;
-    font-size: 16px;
-    font-weight: 500;
+  display: flex;
+  height: 50px;
+  width: 100%;
+  background-color: #eaeaea;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+  font-size: 16px;
+  font-weight: 500;
 }
-
 .localisation img {
-    width: 12px;
-    height: 16px;
-    align-items: center;
-}
-
-h1 {
-    font-family: 'Roboto';
-    font-size: 24px;
-    font-weight: 700;
+  width: 12px;
+  height: 16px;
+  align-items: center;
 }
 
 .exploration {
-    display:flex;
-    flex-direction: column;
-    align-content: center;
+  display: flex;
+  flex-direction: column;
+  /* align-content: center; */
+  /* justify-content: center; */
+  text-align: center;
+  margin-top: 40px;
+  width: 100%;
 }
+.exploration h1 {
+  font-family: "Roboto";
+  font-size: 24px;
+  font-weight: 700;
+}
+.exploration p {
+  font-size: 18px;
+  margin-top: 10px;
+  font-style: normal;
+  font-weight: 300;
+}
+
+.button {
+  width: 218px;
+  height: 50px;
+  border-radius: 25px;
+  background: var(--button-gradient);
+  color: white;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=styles.css.map */
