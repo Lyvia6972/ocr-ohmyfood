@@ -63,6 +63,7 @@ body {
 .exploration h1 {
   font-size: 24px;
   font-weight: 700;
+  font-family: "Roboto", sans-serif;
   margin: 0px;
 }
 .exploration p {
@@ -86,4 +87,47 @@ body {
   align-items: center;
   width: 218px;
   margin-top: 16px;
+}
+
+.fonctionnement {
+  display: flex;
+  height: 440px;
+  width: 100%;
+  flex-direction: row;
+  padding-left: 20px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.fonctionnement h1 {
+  font-size: 24px;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  margin-top: 30px;
+}
+.fonctionnement .position {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+}
+.fonctionnement .rectangle {
+  display: flex;
+  align-items: center;
+  background-color: #f6f6f6;
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  width: 322px;
+  height: 72.4px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+.fonctionnement .rectangle .pastille {
+  display: flex;
+}
+.fonctionnement .rectangle .petiteIcone {
+  display: flex;
+  margin-left: 20px;
+  gap: 15px;
 }/*# sourceMappingURL=styles.css.map */

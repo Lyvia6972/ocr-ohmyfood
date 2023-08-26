@@ -16,12 +16,30 @@ $button-gradient: linear-gradient(175deg, #ff79da 30%, #9356dc 70%);
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
 
+
 @mixin flexMilieu{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+
+@mixin formeRectangulaire{
+    background-color: $main-bg-color;
+    border-radius: 20px;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+    font-family: $font-family;
+    font-weight: 500;
+}
+
+
+@mixin h1{
+        font-size: 24px;
+        font-weight: 700;
+        font-family: $font-family;
+       
+    
+}
 
 .main-container {
     display: flex;
@@ -84,9 +102,9 @@ body {
     height: 290px;
     background-color: $main-bg-color;
     font-family:$font-family;
+
          h1 {
-            font-size: 24px;
-            font-weight: 700;
+            @include h1;
             margin: 0px;
             }
     
@@ -108,4 +126,61 @@ body {
             }
 }
 
+.fonctionnement {
+    display: flex;
+    height: 440px;
+    width: 100%;
+    flex-direction: row;
+    padding-left: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+
+        h1{
+            @include h1;
+            margin-top: 30px;
+        }
+
+        .position{
+            display: flex;
+            width: 100%;
+            height: 100%;
+            flex-direction: column;
+        }
+
+        .rectangle {
+            display: flex;
+            align-items: center;
+            @include formeRectangulaire;
+            width: 322px;
+            height: 72.4px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            // flex-wrap: wrap;
+            // justify-content: space-around;
+            // gap: 10px;
+        
+                .pastille{
+                    display: flex;
+                    // align-items: center;
+                    // justify-content: flex-start;
+                    // position: absolute;
+
+                   
+                }
+
+                .petiteIcone{
+                    display: flex;
+                    margin-left:20px ;
+                    gap: 15px;
+                }
+
+        }
+
+
+
+
+
+
+
+}
 
