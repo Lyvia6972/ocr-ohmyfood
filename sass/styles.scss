@@ -1,14 +1,26 @@
 $font-family: "Roboto", sans-serif;
 $text-decoration: none;
-$color: black;
-$margin: 0px;
-$padding: 0px;
-$box-sizing: border-box;
 $main-bg-color: #f6f6f6;
-$body-font: "Roboto", sans-serif;
-$button-gradient: linear-gradient(175deg, #9356dc 0%, #ff79da 100%);
+$button-gradient: linear-gradient(175deg, #ff79da 30%, #9356dc 70%);
 
 
+@mixin btnViolet{
+    height: 50px;
+    border-radius: 25px;
+    background:$button-gradient;
+    color: white;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    font-family: $font-family;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+@mixin flexMilieu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 .main-container {
@@ -18,14 +30,15 @@ $button-gradient: linear-gradient(175deg, #9356dc 0%, #ff79da 100%);
     box-sizing: border-box;
     flex-wrap: wrap;
     margin: 0px;
+    padding: 0px;
 }
 
-// body {
-//     display:flex;
-//     justify-content: center;
-//     margin: 0px;
-//     padding: 0px;
-// }
+body {
+    display:flex;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+}
 
 .en-tete {
     display: flex;
@@ -34,6 +47,7 @@ $button-gradient: linear-gradient(175deg, #9356dc 0%, #ff79da 100%);
     padding: 14px 89px 13px 80px;
     height: 63px;
     width: 100%;
+    position: relative;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 
     img {
@@ -44,15 +58,14 @@ $button-gradient: linear-gradient(175deg, #9356dc 0%, #ff79da 100%);
 }
 
 .localisation {
-    display: flex;
+    @include flexMilieu;
     height: 50px;
     width: 100%;
     background-color: #eaeaea;
-    align-items: center;
-    justify-content: center;
     gap: 17px;
     font-size: 16px;
     font-weight: 500;
+    font-family: $font-family;
 
     img {
         width: 12px;
@@ -64,40 +77,35 @@ $button-gradient: linear-gradient(175deg, #9356dc 0%, #ff79da 100%);
 
 
 .exploration  {
-    display:flex;
+    @include flexMilieu;
     flex-direction: column;
-    /* align-content: center; */
-    /* justify-content: center; */
     text-align: center;
-    margin-top: 40px;
     width: 100%;
+    height: 290px;
+    background-color: $main-bg-color;
+    font-family:$font-family;
          h1 {
-            font-family: "Roboto";
             font-size: 24px;
             font-weight: 700;
+            margin: 0px;
             }
     
          p {
             font-size: 18px;
-            margin-top: 10px;
-            font-style: normal;
+            margin-top: 15px;
+            color:#353535;
             font-weight: 300;
+            
+            
             }
 
+            .button {
+                @include btnViolet;
+                @include flexMilieu;
+                width: 218px;
+                margin-top: 16px;
+               
+            }
 }
 
-.button {
-    width: 218px;
-    height: 50px;
-    border-radius: 25px;
-    background: var(--button-gradient) ;
-    color: white;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
