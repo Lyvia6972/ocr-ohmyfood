@@ -2,6 +2,8 @@ $font-family: "Roboto", sans-serif;
 $text-decoration: none;
 $main-bg-color: #f6f6f6;
 $button-gradient: linear-gradient(175deg, #ff79da 30%, #9356dc 70%);
+$colorPastille: #9356dc;
+$colorAniation:#99E2D0;
 
 
 @mixin btnViolet{
@@ -137,7 +139,7 @@ body {
     height: 440px;
     width: 100%;
     flex-direction: row;
-    padding-left: 20px;
+    padding-left: 30px;
     flex-wrap: wrap;
    
 
@@ -145,49 +147,62 @@ body {
             @include h1;
             margin: 30px 0px 0px 0px;
         }
+    }
 
-        .position{
+
+.position{
             display: flex;
             flex-direction: column;
-            align-items: center;
+            // align-items: center;
         }
 
-        .rectangle {
-            display: flex;
-            align-items: center;
-            @include formeRectangulaire;
-            width: 322px;
-            height: 72.4px;
-            margin-bottom: 20px;
-            box-sizing: border-box;
-            // flex-wrap: wrap;
-            // justify-content: space-around;
-            // gap: 10px;
+.rectangle {
+    display: flex;
+    align-items: center;
+    @include formeRectangulaire;
+    width: 322px;
+    height: 72.4px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    // flex-wrap: wrap;
+    // justify-content: space-around;
+    // gap: 10px;
+    margin-left: 0px;
+    font-size: 16px;
+   
         
-                .pastille{
-                    display: flex;
-                    // align-items: center;
-                    // justify-content: flex-start;
-                    // position: absolute;
-                    transform:translate(-10px,0px);
+        .pastille {
+            display: flex;
+            background:$colorPastille;
+            width: 24px;
+            height: 24px;
+            border-radius: 99px;
+            color: #f6f6f6;
+            font-family: $font-family;
+            font-size: 14px;
+            font-weight: 500;
+            align-items: center;
+            justify-content: center;
+            // position: absolute;
+            transform:translate(-10px,0px);
 
                    
-                }
+        }
 
-                .petiteIcone{
+        .petiteIcone{
                     display: flex;
-                    margin-left:20px ;
-                    gap: 15px;
+                    margin:0px 25px ;
+                   gap:25px;
                 }
 
         }
 
-}
+
 
 .restaurant{
     background-color: $main-bg-color;
     width: 100%;
-    padding: 0px 20px;
+    padding: 0px 30px;
     flex-direction: column;
     display: flex;
     
@@ -195,44 +210,59 @@ body {
             @include h1;
             
         }
+}
 
-        .positionCadre{
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
-            flex-direction: column;
+.positionCadre{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-direction: column;
+    gap:30px
+}            
             
-                .cadre{
-                    background-color: white;
-                    border-radius: 20px;
-                    width: 340px;
-                    // height: 251px;
-                }
+.cadre{
+    background-color: white;
+    border-radius: 15px;
+    width:100%;
+    height: 271px;
 
-                img{
-                    width: 100%;
-                    height: 231px;
-                    border-top-left-radius: 20px;
-                    border-top-right-radius: 20px;
-                    object-fit: cover;
-                }
 
-                .conteneur{
-                    width: 100%;
-                    margin-left: 20px;
-                }
+    img{
+        width: 100%;
+        height:200px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        object-fit: cover;
+    }
+    .conteneur{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-left: 20px;
+        // height: 90px;
+        padding: 0px;
+    
 
-                    h3 {
-                        @include h3
-                    }
-
-                    p {
-                        font-family: $font-family;
-                        font-size: 17px;
-                        font-weight: 300;
-                    }
-
+       .conteneurTitre {
+            @include h3;
+            display: flex;
+            margin: 0px;
+            padding-top:10px;
          }
             
+        .conteneurTexte {
+            display:flex;
+            margin: 0px;
+            font-family: $font-family;
+            font-size: 17px;
+            font-weight: 300;
+        }
+    }
+    
 }
+
+
+
+         
+            
 

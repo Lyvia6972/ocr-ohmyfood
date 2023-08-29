@@ -94,7 +94,7 @@ body {
   height: 440px;
   width: 100%;
   flex-direction: row;
-  padding-left: 20px;
+  padding-left: 30px;
   flex-wrap: wrap;
 }
 .fonctionnement h1 {
@@ -103,12 +103,13 @@ body {
   font-family: "Roboto", sans-serif;
   margin: 30px 0px 0px 0px;
 }
-.fonctionnement .position {
+
+.position {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
-.fonctionnement .rectangle {
+
+.rectangle {
   display: flex;
   align-items: center;
   background-color: #f6f6f6;
@@ -120,21 +121,33 @@ body {
   height: 72.4px;
   margin-bottom: 20px;
   box-sizing: border-box;
+  margin-left: 0px;
+  font-size: 16px;
 }
-.fonctionnement .rectangle .pastille {
+.rectangle .pastille {
   display: flex;
+  background: #9356dc;
+  width: 24px;
+  height: 24px;
+  border-radius: 99px;
+  color: #f6f6f6;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  align-items: center;
+  justify-content: center;
   transform: translate(-10px, 0px);
 }
-.fonctionnement .rectangle .petiteIcone {
+.rectangle .petiteIcone {
   display: flex;
-  margin-left: 20px;
-  gap: 15px;
+  margin: 0px 25px;
+  gap: 25px;
 }
 
 .restaurant {
   background-color: #f6f6f6;
   width: 100%;
-  padding: 0px 20px;
+  padding: 0px 30px;
   flex-direction: column;
   display: flex;
 }
@@ -143,35 +156,47 @@ body {
   font-weight: 700;
   font-family: "Roboto", sans-serif;
 }
-.restaurant .positionCadre {
+
+.positionCadre {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
   flex-direction: column;
+  gap: 30px;
 }
-.restaurant .positionCadre .cadre {
+
+.cadre {
   background-color: white;
-  border-radius: 20px;
-  width: 340px;
-}
-.restaurant .positionCadre img {
+  border-radius: 15px;
   width: 100%;
-  height: 231px;
+  height: 271px;
+}
+.cadre img {
+  width: 100%;
+  height: 200px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.restaurant .positionCadre .conteneur {
+.cadre .conteneur {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   margin-left: 20px;
+  padding: 0px;
 }
-.restaurant .positionCadre h3 {
+.cadre .conteneur .conteneurTitre {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 700;
+  display: flex;
+  margin: 0px;
+  padding-top: 10px;
 }
-.restaurant .positionCadre p {
+.cadre .conteneur .conteneurTexte {
+  display: flex;
+  margin: 0px;
   font-family: "Roboto", sans-serif;
   font-size: 17px;
   font-weight: 300;
