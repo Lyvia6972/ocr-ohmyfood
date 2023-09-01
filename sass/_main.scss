@@ -1,10 +1,7 @@
-
-
-
 .main-container {
     display: flex;
     width: 100%;
-    max-width: 768px;
+    max-width: 375px;
     box-sizing: border-box;
     flex-wrap: wrap;
     margin: 0px;
@@ -12,7 +9,7 @@
 }
 
 body {
-    display:flex;
+    display: flex;
     justify-content: center;
     margin: 0px;
     padding: 0px;
@@ -52,62 +49,64 @@ body {
     }
 }
 
-
-
-.exploration  {
+.exploration {
     @include flexMilieu;
     flex-direction: column;
     text-align: center;
     width: 100%;
     height: 290px;
     background-color: $main-bg-color;
-    font-family:$font-family;
+    font-family: $font-family;
 
-         h1 {
-            @include h1;
-            margin: 0px;
-            }
-    
-         p {
-            font-size: 18px;
-            margin-top: 15px;
-            color:#353535;
-            font-weight: 300;
-            
-            
-            }
+    h1 {
+        @include h1;
+        margin: 0px;
+    }
 
-            .button {
-                @include btnViolet;
-                @include flexMilieu;
-                width: 218px;
-                margin-top: 16px;
-               
-            }
+    p {
+        font-size: 18px;
+        margin-top: 15px;
+        color: #353535;
+        font-weight: 300;
+    }
+}
+
+.button {
+    @include btnViolet;
+    @include flexMilieu;
+    width: 218px;
+    margin-top: 16px;
+    // transition-property:background;
+    // transition-duration: 10s;
+
+    &:hover {
+        // background: linear-gradient(201deg, #9356dc -5.2%, #ff79da 110.74%);
+        
+        background: #002255;
+    }
 }
 
 .fonctionnement {
     display: flex;
     height: 440px;
     width: 100%;
-    flex-direction: row;
+    flex-direction: column;
     padding-left: 30px;
     flex-wrap: wrap;
-   
+    gap:30px;
 
-        h1{
-            @include h1;
-            margin: 30px 0px 0px 0px;
-        }
+    h1 {
+        @include h1;
+        margin: 30px 0px 0px 0px;
     }
+}
 
+.position {
+    display: flex;
+    flex-direction: column;
 
-.position{
-            display: flex;
-            flex-direction: column;
-            
-            // align-items: center;
-        }
+    // align-items: center;
+}
 
 .rectangle {
     display: flex;
@@ -122,99 +121,89 @@ body {
     // gap: 10px;
     margin-left: 0px;
     font-size: 16px;
-   
-        
-        .pastille {
-            display: flex;
-            background:$colorPastille;
-            width: 24px;
-            height: 24px;
-            border-radius: 99px;
-            color: #f6f6f6;
-            font-family: $font-family;
-            font-size: 14px;
-            font-weight: 500;
-            align-items: center;
-            justify-content: center;
-            // position: absolute;
-            transform:translate(-10px,0px);
 
-                   
-        }
+    .pastille {
+        display: flex;
+        background: $colorPastille;
+        width: 24px;
+        height: 24px;
+        border-radius: 99px;
+        color: #f6f6f6;
+        font-family: $font-family;
+        font-size: 14px;
+        font-weight: 500;
+        align-items: center;
+        justify-content: center;
+        // position: absolute;
+        transform: translate(-10px, 0px);
+    }
 
-        .petiteIcone{
-                    display: flex;
-                    margin:0px 25px ;
-                   gap:25px;
-                }
+    .petiteIcone {
+        display: flex;
+        margin: 0px 25px;
+        gap: 25px;
+    }
+}
 
-        }
-
-
-
-.restaurant{
+.restaurant {
     background-color: $main-bg-color;
     width: 100%;
     padding: 0px 30px;
     flex-direction: column;
     display: flex;
-    
-        h1 {
-            @include h1;
-            
-        }
+
+    h1 {
+        @include h1;
+    }
 }
 
-.positionCadre{
+.positionCadre {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
     flex-direction: column;
-    gap:30px
-}            
-            
-.cadre{
+    gap: 30px;
+}
+
+.cadre {
     background-color: white;
     border-radius: 15px;
-    width:100%;
+    width: 100%;
     height: 271px;
 
-
-    img{
+    img {
         width: 100%;
-        height:200px;
+        height: 200px;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
         object-fit: cover;
     }
-    .conteneur{
+    .conteneur {
         display: flex;
         flex-direction: column;
         width: 100%;
         margin-left: 20px;
         // height: 90px;
         padding: 0px;
-    
 
-       .conteneurTitre {
+        .conteneurTitre {
             @include h2;
             display: flex;
             margin: 0px;
-            padding-top:10px;
-         }
-            
+            padding-top: 10px;
+        }
+
         .conteneurTexte {
-            display:flex;
+            display: flex;
             margin: 0px;
             font-family: $font-family;
             font-size: 17px;
             font-weight: 300;
         }
 
-
-        .conteneurCoeur{
+        .conteneurCoeur {
             display: flex;
-            position:relative;
+            position: relative;
             height: 20px;
             width: 21px;
             // right: -280px;
@@ -224,35 +213,30 @@ body {
             border-top-left-radius: 0px;
             border-top-right-radius: 0px;
             object-position: 10px;
-        }       
+        }
     }
-    
-    
-    .etiquette{
+
+    .etiquette {
         display: flex;
         background-color: $colorAnimation;
-        color:#008766;
+        color: #008766;
         font-family: $font-family;
-        font-size:14px;
+        font-size: 14px;
         font-weight: 500;
         width: 80px;
         height: 29px;
-        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15 );
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
         position: relative;
         // right:-200px;
-        top:-265px;
+        top: -265px;
         justify-content: center;
         align-items: center;
         left: 63%;
         justify-items: flex-end;
-        
-        
-    
-    
     }
 }
 
-footer{
+footer {
     background-color: $colorFooter;
     width: 100%;
     color: white;
@@ -261,32 +245,28 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-
-
 }
 
-ul{
+ul {
     list-style: none;
     padding-left: 0px;
     font-size: 16px;
     font-weight: 500;
     width: 100%;
     margin: 0px;
-   
 }
 
 h3 {
-    font-family: 'Shrikhand';
+    font-family: "Shrikhand";
     font-size: 18px;
     font-weight: 400;
     width: 100%;
     margin-top: 15px;
-    margin-bottom:10px;
+    margin-bottom: 10px;
 }
 
-li{
+li {
     display: flex;
     padding-top: 7px;
-    gap:10px;
+    gap: 10px;
 }
-

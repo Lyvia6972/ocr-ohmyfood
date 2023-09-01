@@ -1,7 +1,7 @@
 .main-container {
   display: flex;
   width: 100%;
-  max-width: 768px;
+  max-width: 375px;
   box-sizing: border-box;
   flex-wrap: wrap;
   margin: 0px;
@@ -72,7 +72,8 @@ body {
   color: #353535;
   font-weight: 300;
 }
-.exploration .button {
+
+.button {
   height: 50px;
   border-radius: 25px;
   background: linear-gradient(175deg, #ff79da 30%, #9356dc 70%);
@@ -81,6 +82,7 @@ body {
   font-style: normal;
   font-weight: 500;
   font-family: "Roboto", sans-serif;
+  text-decoration: none;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   display: flex;
   justify-content: center;
@@ -88,14 +90,18 @@ body {
   width: 218px;
   margin-top: 16px;
 }
+.button:hover {
+  background: #002255;
+}
 
 .fonctionnement {
   display: flex;
   height: 440px;
   width: 100%;
-  flex-direction: row;
+  flex-direction: column;
   padding-left: 30px;
   flex-wrap: wrap;
+  gap: 30px;
 }
 .fonctionnement h1 {
   font-size: 24px;
