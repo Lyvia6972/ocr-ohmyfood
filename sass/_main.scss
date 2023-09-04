@@ -1,11 +1,18 @@
+// *{
+//     box-shadow: 0 0 0 3px red inset;
+// }
+
+
 .main-container {
     display: flex;
     width: 100%;
-    max-width: 375px;
+    // max-width: 375px;
     box-sizing: border-box;
     flex-wrap: wrap;
     margin: 0px;
     padding: 0px;
+
+       
 }
 
 body {
@@ -58,6 +65,11 @@ body {
     background-color: $main-bg-color;
     font-family: $font-family;
 
+    @media screen and (min-width:768px) and (max-width:1440px) {
+        height: 220px;
+    }
+
+
     h1 {
         @include h1;
         margin: 0px;
@@ -69,6 +81,8 @@ body {
         color: #353535;
         font-weight: 300;
     }
+
+
 }
 
 .button {
@@ -76,13 +90,14 @@ body {
     @include flexMilieu;
     width: 218px;
     margin-top: 16px;
-    // transition-property:background;
-    // transition-duration: 10s;
+    transition-property:background-color;
+    transition-duration:10s;
+    
 
     &:hover {
         // background: linear-gradient(201deg, #9356dc -5.2%, #ff79da 110.74%);
         
-        background: #002255;
+        background-color: #002255;
     }
 }
 
@@ -98,14 +113,28 @@ body {
     h1 {
         @include h1;
         margin: 30px 0px 0px 0px;
+        height: 30px;
     }
+
+    @media screen and (min-width: 768px) and (max-width:1440px) {
+        height: 220px;
+        padding: 20px 160px;
+    }
+    
 }
+
 
 .position {
     display: flex;
     flex-direction: column;
-
+    left:0px;
     // align-items: center;
+    
+    
+    @media screen and (min-width: 768px)and (max-width:1440px) {
+        flex-direction: row;
+       
+    }
 }
 
 .rectangle {
@@ -155,6 +184,11 @@ body {
     h1 {
         @include h1;
     }
+
+    @media screen and (min-width:768px) and (max-width:1440px) {
+        padding: 0px 140px;
+        
+    }
 }
 
 .positionCadre {
@@ -163,13 +197,27 @@ body {
     margin-bottom: 20px;
     flex-direction: column;
     gap: 30px;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+
 }
+
 
 .cadre {
     background-color: white;
     border-radius: 15px;
     width: 100%;
     height: 271px;
+    position:relative;
+
+    @media screen and (min-width:768px) and (max-width:1440px){
+        width: 490px;
+    }
 
     img {
         width: 100%;
@@ -185,12 +233,14 @@ body {
         margin-left: 20px;
         // height: 90px;
         padding: 0px;
+        position:relative;
 
         .conteneurTitre {
             @include h2;
             display: flex;
             margin: 0px;
             padding-top: 10px;
+            width:100%;
         }
 
         .conteneurTexte {
@@ -204,19 +254,20 @@ body {
         .conteneurCoeur {
             display: flex;
             position: relative;
-            height: 20px;
-            width: 21px;
-            // right: -280px;
-            // top: -35px;
+            height: 30px;
+            width: 31px;
+            right: 70px;
+            top: 15px;
             // bottom: 1px;
             // z-index: 4;
             border-top-left-radius: 0px;
             border-top-right-radius: 0px;
-            object-position: 10px;
+            // object-position: 10px;
+            position:absolute
         }
     }
 
-    .etiquette {
+    .cadre__etiquette {
         display: flex;
         background-color: $colorAnimation;
         color: #008766;
@@ -226,13 +277,14 @@ body {
         width: 80px;
         height: 29px;
         box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-        position: relative;
+        // position: relative;
         // right:-200px;
         top: -265px;
         justify-content: center;
         align-items: center;
         left: 63%;
         justify-items: flex-end;
+        position:absolute;
     }
 }
 
@@ -245,6 +297,16 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    @media screen and (min-width:768px) and (max-width: 1440px) {
+        height: 54px;
+        flex-direction: row-reverse;
+        padding: 30px 25px;
+        justify-content: flex-end;
+        align-items: center;
+        gap:50px
+       
+    }
 }
 
 ul {
@@ -254,19 +316,36 @@ ul {
     font-weight: 500;
     width: 100%;
     margin: 0px;
+
+    @media screen and (min-width:768px) and (max-width:1440px) {
+        display: flex;
+        justify-content: flex-end;
+        align-content: stretch;
+        
+    }
 }
 
-h3 {
+footer__h3 {
     font-family: "Shrikhand";
     font-size: 18px;
     font-weight: 400;
     width: 100%;
     margin-top: 15px;
     margin-bottom: 10px;
+    
+   
 }
 
 li {
     display: flex;
     padding-top: 7px;
     gap: 10px;
+
+    @media screen and (min-width:768px) and (max-width:1440px) {
+        gap: 10px;
+        justify-content: space-around;
+        margin-right: 20px;
+
+        
+    }
 }

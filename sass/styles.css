@@ -1,7 +1,6 @@
 .main-container {
   display: flex;
   width: 100%;
-  max-width: 375px;
   box-sizing: border-box;
   flex-wrap: wrap;
   margin: 0px;
@@ -60,6 +59,11 @@ body {
   background-color: #f6f6f6;
   font-family: "Roboto", sans-serif;
 }
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .exploration {
+    height: 220px;
+  }
+}
 .exploration h1 {
   font-size: 24px;
   font-weight: 700;
@@ -89,9 +93,11 @@ body {
   align-items: center;
   width: 218px;
   margin-top: 16px;
+  transition-property: background-color;
+  transition-duration: 10s;
 }
 .button:hover {
-  background: #002255;
+  background-color: #002255;
 }
 
 .fonctionnement {
@@ -108,11 +114,24 @@ body {
   font-weight: 700;
   font-family: "Roboto", sans-serif;
   margin: 30px 0px 0px 0px;
+  height: 30px;
+}
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .fonctionnement {
+    height: 220px;
+    padding: 20px 160px;
+  }
 }
 
 .position {
   display: flex;
   flex-direction: column;
+  left: 0px;
+}
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .position {
+    flex-direction: row;
+  }
 }
 
 .rectangle {
@@ -162,6 +181,11 @@ body {
   font-weight: 700;
   font-family: "Roboto", sans-serif;
 }
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .restaurant {
+    padding: 0px 140px;
+  }
+}
 
 .positionCadre {
   display: flex;
@@ -170,12 +194,25 @@ body {
   flex-direction: column;
   gap: 30px;
 }
+@media screen and (min-width: 768px) {
+  .positionCadre {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
 
 .cadre {
   background-color: white;
   border-radius: 15px;
   width: 100%;
   height: 271px;
+  position: relative;
+}
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .cadre {
+    width: 490px;
+  }
 }
 .cadre img {
   width: 100%;
@@ -191,6 +228,7 @@ body {
   width: 100%;
   margin-left: 20px;
   padding: 0px;
+  position: relative;
 }
 .cadre .conteneur .conteneurTitre {
   font-family: "Roboto", sans-serif;
@@ -199,6 +237,7 @@ body {
   display: flex;
   margin: 0px;
   padding-top: 10px;
+  width: 100%;
 }
 .cadre .conteneur .conteneurTexte {
   display: flex;
@@ -210,14 +249,15 @@ body {
 .cadre .conteneur .conteneurCoeur {
   display: flex;
   position: relative;
-  height: 20px;
-  width: 21px;
+  height: 30px;
+  width: 31px;
+  right: 70px;
+  top: 15px;
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
-  -o-object-position: 10px;
-     object-position: 10px;
+  position: absolute;
 }
-.cadre .etiquette {
+.cadre .cadre__etiquette {
   display: flex;
   background-color: #99E2D0;
   color: #008766;
@@ -227,12 +267,12 @@ body {
   width: 80px;
   height: 29px;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-  position: relative;
   top: -265px;
   justify-content: center;
   align-items: center;
   left: 63%;
   justify-items: flex-end;
+  position: absolute;
 }
 
 footer {
@@ -245,6 +285,16 @@ footer {
   flex-direction: column;
   align-items: flex-start;
 }
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  footer {
+    height: 54px;
+    flex-direction: row-reverse;
+    padding: 30px 25px;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 50px;
+  }
+}
 
 ul {
   list-style: none;
@@ -254,8 +304,15 @@ ul {
   width: 100%;
   margin: 0px;
 }
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    align-content: stretch;
+  }
+}
 
-h3 {
+footer__h3 {
   font-family: "Shrikhand";
   font-size: 18px;
   font-weight: 400;
@@ -268,4 +325,11 @@ li {
   display: flex;
   padding-top: 7px;
   gap: 10px;
+}
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  li {
+    gap: 10px;
+    justify-content: space-around;
+    margin-right: 20px;
+  }
 }/*# sourceMappingURL=styles.css.map */
