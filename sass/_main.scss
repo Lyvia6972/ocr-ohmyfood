@@ -1,12 +1,13 @@
 // *{
-//     box-shadow: 0 0 0 3px red inset;
+//     // box-shadow: 0 0 0 3px red inset;
+//         // outline: 1px solid blue;
 // }
 
 
 .main-container {
     display: flex;
-    width: 100%;
-    // max-width: 375px;
+    // width: 100%;
+    max-width: 375px;
     box-sizing: border-box;
     flex-wrap: wrap;
     margin: 0px;
@@ -24,7 +25,7 @@ body {
 
 .en-tete {
     display: flex;
-    flex-direction: column;
+    // flex-direction: column;
     align-items: center;
     padding: 14px 89px 13px 80px;
     height: 63px;
@@ -38,6 +39,7 @@ body {
         padding: 0px;
     }
 }
+
 
 .localisation {
     @include flexMilieu;
@@ -90,25 +92,26 @@ body {
     @include flexMilieu;
     width: 218px;
     margin-top: 16px;
-    transition-property:background-color;
-    transition-duration:10s;
+    transition: background 2s;
     
-
+    
     &:hover {
-        // background: linear-gradient(201deg, #9356dc -5.2%, #ff79da 110.74%);
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+
         
-        background-color: #002255;
+        // background: #002255;
     }
 }
 
 .fonctionnement {
     display: flex;
-    height: 440px;
+    height: 375px;
     width: 100%;
     flex-direction: column;
-    padding-left: 30px;
-    flex-wrap: wrap;
+    padding: 0px 30px;
+    // flex-wrap: wrap;
     gap:30px;
+    position:relative;
 
     h1 {
         @include h1;
@@ -116,11 +119,16 @@ body {
         height: 30px;
     }
 
-    @media screen and (min-width: 768px) and (max-width:1440px) {
+    @media screen and (min-width: 768px) and (max-width:1200px) {
         height: 220px;
-        padding: 20px 160px;
+        padding: 20px 140px;
+        flex-direction: column;
+        
     }
-    
+    @media screen and (min-width:1201) {
+        height: 220px;
+        padding:20px 140px ;
+    }
 }
 
 
@@ -128,11 +136,19 @@ body {
     display: flex;
     flex-direction: column;
     left:0px;
+    position:relative;
+  
     // align-items: center;
     
     
     @media screen and (min-width: 768px)and (max-width:1440px) {
         flex-direction: row;
+        gap:30px;
+        flex-wrap: wrap;
+        top: 120px;
+        position:absolute;
+        padding-left: 140px;
+        
        
     }
 }
@@ -141,7 +157,7 @@ body {
     display: flex;
     align-items: center;
     @include formeRectangulaire;
-    width: 322px;
+    width: 310px;
     height: 72.4px;
     margin-bottom: 20px;
     box-sizing: border-box;
@@ -266,27 +282,31 @@ body {
             position:absolute
         }
     }
-
     .cadre__etiquette {
-        display: flex;
-        background-color: $colorAnimation;
-        color: #008766;
-        font-family: $font-family;
-        font-size: 14px;
-        font-weight: 500;
-        width: 80px;
-        height: 29px;
-        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-        // position: relative;
-        // right:-200px;
-        top: -265px;
-        justify-content: center;
-        align-items: center;
-        left: 63%;
-        justify-items: flex-end;
-        position:absolute;
-    }
+            display: flex;
+            background-color: $colorAnimation;
+            color: #008766;
+            font-family: $font-family;
+            font-size: 14px;
+            font-weight: 500;
+            width: 80px;
+            height: 29px;
+            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+            // position: relative;
+            // right:-200px;
+            top: -250px;
+            justify-content: center;
+            align-items: center;
+            left: 63%;
+            // justify-items: flex-end;
+            position:absolute;
+            z-index: 5;
+        }
 }
+
+
+
+
 
 footer {
     background-color: $colorFooter;
@@ -349,3 +369,97 @@ li {
         
     }
 }
+
+// * -_-_-_-_-_ Les pages des restaurants _-_-_-_-_-_-_-_-_/*
+
+.localisation2{
+    display: flex;
+
+        img{
+
+            height: 290px;
+            width: 100%;
+        }
+}
+
+.en-tete2 {
+    display: flex;
+    // flex-direction: column;
+    align-items: center;
+    padding: 14px 89px 13px 80px;
+    height: 63px;
+    width: 100%;
+    position: relative;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+
+    img {
+        width: 162px;
+        height: 44px;
+        padding: 0px;
+    }
+}
+
+.fa-arrow-left{
+    display:inline-flex;
+    // display:flex;
+    color:$colorFooter;
+
+}
+
+.fond-arrondi {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $main-bg-color;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    top:-60px;
+    width: 100%;
+    position:relative;
+    padding: 0px 17px;
+
+        .gros-titre {
+            font-family: "Shrikhand", serif;
+            font-size: 28px;
+            
+        }
+}
+
+.menu {
+    color: black;
+    font-family: $font-family;
+    font-size: 16px;
+    font-weight: 300;
+    
+}
+
+.sous-titre{
+    font-family: $font-family;
+    font-size: 18px;
+    font-weight: 500;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+ 
+}
+
+.description{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 15.043px;
+    font-family: $font-family;
+    font-weight: 300;
+    padding-top: 5px;
+}
+
+.rectangle2 {
+    display: flex;
+    align-items: center;
+    @include formeRectangulaire;
+    width: 310px;
+    height: 72.4px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    padding: 17px;
+}
+    

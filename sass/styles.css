@@ -1,6 +1,6 @@
 .main-container {
   display: flex;
-  width: 100%;
+  max-width: 375px;
   box-sizing: border-box;
   flex-wrap: wrap;
   margin: 0px;
@@ -16,7 +16,6 @@ body {
 
 .en-tete {
   display: flex;
-  flex-direction: column;
   align-items: center;
   padding: 14px 89px 13px 80px;
   height: 63px;
@@ -80,7 +79,7 @@ body {
 .button {
   height: 50px;
   border-radius: 25px;
-  background: linear-gradient(175deg, #ff79da 30%, #9356dc 70%);
+  background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
   color: white;
   font-size: 16px;
   font-style: normal;
@@ -93,21 +92,20 @@ body {
   align-items: center;
   width: 218px;
   margin-top: 16px;
-  transition-property: background-color;
-  transition-duration: 10s;
+  transition: background 2s;
 }
 .button:hover {
-  background-color: #002255;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
 }
 
 .fonctionnement {
   display: flex;
-  height: 440px;
+  height: 375px;
   width: 100%;
   flex-direction: column;
-  padding-left: 30px;
-  flex-wrap: wrap;
+  padding: 0px 30px;
   gap: 30px;
+  position: relative;
 }
 .fonctionnement h1 {
   font-size: 24px;
@@ -116,10 +114,17 @@ body {
   margin: 30px 0px 0px 0px;
   height: 30px;
 }
-@media screen and (min-width: 768px) and (max-width: 1440px) {
+@media screen and (min-width: 768px) and (max-width: 1200px) {
   .fonctionnement {
     height: 220px;
-    padding: 20px 160px;
+    padding: 20px 140px;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 1201) {
+  .fonctionnement {
+    height: 220px;
+    padding: 20px 140px;
   }
 }
 
@@ -127,10 +132,16 @@ body {
   display: flex;
   flex-direction: column;
   left: 0px;
+  position: relative;
 }
 @media screen and (min-width: 768px) and (max-width: 1440px) {
   .position {
     flex-direction: row;
+    gap: 30px;
+    flex-wrap: wrap;
+    top: 120px;
+    position: absolute;
+    padding-left: 140px;
   }
 }
 
@@ -142,7 +153,7 @@ body {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  width: 322px;
+  width: 310px;
   height: 72.4px;
   margin-bottom: 20px;
   box-sizing: border-box;
@@ -219,8 +230,7 @@ body {
   height: 200px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .cadre .conteneur {
   display: flex;
@@ -267,12 +277,12 @@ body {
   width: 80px;
   height: 29px;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-  top: -265px;
+  top: -250px;
   justify-content: center;
   align-items: center;
   left: 63%;
-  justify-items: flex-end;
   position: absolute;
+  z-index: 5;
 }
 
 footer {
@@ -332,4 +342,89 @@ li {
     justify-content: space-around;
     margin-right: 20px;
   }
+}
+
+.localisation2 {
+  display: flex;
+}
+.localisation2 img {
+  height: 290px;
+  width: 100%;
+}
+
+.en-tete2 {
+  display: flex;
+  align-items: center;
+  padding: 14px 89px 13px 80px;
+  height: 63px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
+.en-tete2 img {
+  width: 162px;
+  height: 44px;
+  padding: 0px;
+}
+
+.fa-arrow-left {
+  display: inline-flex;
+  color: #353535;
+}
+
+.fond-arrondi {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #f6f6f6;
+  border-top-left-radius: 35px;
+  border-top-right-radius: 35px;
+  top: -60px;
+  width: 100%;
+  position: relative;
+  padding: 0px 17px;
+}
+.fond-arrondi .gros-titre {
+  font-family: "Shrikhand", serif;
+  font-size: 28px;
+}
+
+.menu {
+  color: black;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.sous-titre {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.description {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 15.043px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  padding-top: 5px;
+}
+
+.rectangle2 {
+  display: flex;
+  align-items: center;
+  background-color: #f6f6f6;
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  width: 310px;
+  height: 72.4px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  padding: 17px;
 }/*# sourceMappingURL=styles.css.map */
