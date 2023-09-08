@@ -1,10 +1,11 @@
 .main-container {
   display: flex;
-  max-width: 375px;
+  width: 100%;
   box-sizing: border-box;
   flex-wrap: wrap;
   margin: 0px;
   padding: 0px;
+  text-decoration: none;
 }
 
 body {
@@ -12,15 +13,16 @@ body {
   justify-content: center;
   margin: 0px;
   padding: 0px;
+  text-decoration: none;
 }
 
 .en-tete {
   display: flex;
   align-items: center;
-  padding: 14px 89px 13px 80px;
   height: 63px;
   width: 100%;
   position: relative;
+  justify-content: center;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 }
 .en-tete img {
@@ -152,13 +154,13 @@ body {
   border-radius: 20px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
   font-family: "Roboto", sans-serif;
-  font-weight: 500;
   width: 310px;
   height: 72.4px;
   margin-bottom: 20px;
   box-sizing: border-box;
   margin-left: 0px;
   font-size: 16px;
+  font-weight: 500;
 }
 .rectangle .pastille {
   display: flex;
@@ -186,6 +188,7 @@ body {
   padding: 0px 30px;
   flex-direction: column;
   display: flex;
+  text-decoration: none;
 }
 .restaurant h1 {
   font-size: 24px;
@@ -389,11 +392,25 @@ li {
   font-size: 28px;
 }
 
+.entrees {
+  margin-bottom: 30px;
+}
+
 .menu {
   color: black;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 300;
+  display: inline;
+  gap: 10px;
+}
+.menu::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 40px;
+  height: 3px;
+  background: #99e2d0;
 }
 
 .sous-titre {
@@ -411,20 +428,21 @@ li {
   font-size: 15.043px;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  padding-top: 5px;
+  align-items: center;
 }
 
 .rectangle2 {
   display: flex;
-  align-items: center;
   background-color: #f6f6f6;
   border-radius: 20px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
   font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  width: 310px;
-  height: 72.4px;
+  width: 100%;
+  height: 73px;
   margin-bottom: 20px;
   box-sizing: border-box;
-  padding: 17px;
+  padding: 15px;
+  flex-direction: column;
+  margin-top: 20px;
+  justify-content: space-between;
 }/*# sourceMappingURL=styles.css.map */
