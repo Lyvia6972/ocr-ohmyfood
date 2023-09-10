@@ -1,6 +1,6 @@
 *{
 //     // box-shadow: 0 0 0 3px red inset;
-        outline: 1px solid blue;
+        // outline: 1px solid blue;
 }
 
 
@@ -14,9 +14,8 @@
     padding: 0px;
     text-decoration:none;
 
-       
-       
 }
+
 
 body {
     display: flex;
@@ -103,7 +102,7 @@ body {
     
     &:hover {
         background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
-
+        transform: scale(2.1);
         
         // background: #002255;
     }
@@ -118,23 +117,38 @@ body {
     // flex-wrap: wrap;
     gap:30px;
     position:relative;
+    
+    @media screen and (min-width: 768px) and (max-width:1200px) {
+    height: 298px;
+    padding: 20px 80px;
+    flex-direction: column;
+    
+    }
+
+
+    @media screen and (min-width:1201) and (max-width:1440px){
+    height: 220px;
+    padding:20px 120px ;
+    }
+
 
     h1 {
         @include h1;
         margin: 30px 0px 0px 0px;
         height: 30px;
-    }
 
-    @media screen and (min-width: 768px) and (max-width:1200px) {
-        height: 220px;
-        padding: 20px 140px;
-        flex-direction: column;
-        
+        @media screen and (min-width:768px) and (max-width:1200px) {
+            padding-left:90px;
+            
+        }
+
+        @media screen and (min-width:12001px) and (max-width:1440px) {
+            padding-left: 120px;
+            
+        }
+
     }
-    @media screen and (min-width:1201) {
-        height: 220px;
-        padding:20px 140px ;
-    }
+    
 }
 
 
@@ -147,23 +161,28 @@ body {
     // align-items: center;
     
     
-    @media screen and (min-width: 768px)and (max-width:1440px) {
+    @media screen and (min-width: 768px)and (max-width:1200px) {
         flex-direction: row;
-        gap:30px;
+        // gap:30px;
         flex-wrap: wrap;
         top: 120px;
         position:absolute;
-        padding-left: 140px;
+        padding-left: 80px;
         
        
+        @media screen and (min-width:1201px) and (max-width:1440px) {
+            padding-left: 120px;
+            
+        }
     }
+
 }
 
 .rectangle {
     display: flex;
     align-items: center;
     @include formeRectangulaire;
-    width: 310px;
+    width: 300px;
     height: 72.4px;
     margin-bottom: 20px;
     box-sizing: border-box;
@@ -210,7 +229,7 @@ body {
     }
 
     @media screen and (min-width:768px) and (max-width:1440px) {
-        padding: 0px 140px;
+        padding: 0px 120px;
         
     }
 }
@@ -240,7 +259,7 @@ body {
     position:relative;
 
     @media screen and (min-width:768px) and (max-width:1440px){
-        width: 490px;
+        width: 375px;
     }
 
     img {
@@ -249,6 +268,7 @@ body {
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
         object-fit:cover;
+        position:absolute;
        
     }
     .conteneur {
@@ -258,7 +278,7 @@ body {
         margin-left: 20px;
         // height: 90px;
         padding: 0px;
-        position:relative;
+        // position:relative;
         text-decoration:none;
 
         .conteneurTitre {
@@ -280,17 +300,12 @@ body {
 
         .conteneurCoeur {
             display: flex;
-            position: relative;
             height: 30px;
             width: 31px;
             right: 70px;
             top: 15px;
-            // bottom: 1px;
-            // z-index: 4;
-            border-top-left-radius: 0px;
-            border-top-right-radius: 0px;
-            // object-position: 10px;
-            position:absolute
+            position:absolute;
+            text-decoration: none;
         }
     }
     .etiquette {
@@ -399,11 +414,11 @@ li {
 .localisation2{
     display: flex;
     width: 100%;
+
         img{
 
             height: 290px;
             width: 100%;
-
                
         }
 }
@@ -492,7 +507,7 @@ li {
 .sous-titre{
     font-family: $font-family;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 600;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
@@ -500,12 +515,19 @@ li {
 }
 
 .description{
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    display:flex;
+    text-overflow:ellipsis;
+    white-space:nowrap;
     font-size: 15.043px;
     font-family: $font-family;
-    font-weight: 300;
-    align-items: center;
+    font-weight: 400;
+    justify-content:space-between;
+
+    span{
+        display: flex;
+        font-weight: 500;
+        
+    }
 }
 
 .rectangle2 {
@@ -524,5 +546,17 @@ li {
             width:604px;
         }
     
+    &:active { 
+        &+ .progress{
+            transform:scaleX(1);
+
+        }
+            
+        }
 }
-    
+.progress{
+    color:$colorAnimation;
+    transform:scaleX(0);
+}
+
+

@@ -1,7 +1,3 @@
-* {
-  outline: 1px solid blue;
-}
-
 .main-container {
   display: flex;
   width: 100%;
@@ -102,6 +98,7 @@ body {
 }
 .button:hover {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+  transform: scale(2.1);
 }
 
 .fonctionnement {
@@ -113,6 +110,19 @@ body {
   gap: 30px;
   position: relative;
 }
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .fonctionnement {
+    height: 298px;
+    padding: 20px 80px;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 1201) and (max-width: 1440px) {
+  .fonctionnement {
+    height: 220px;
+    padding: 20px 120px;
+  }
+}
 .fonctionnement h1 {
   font-size: 24px;
   font-weight: 700;
@@ -121,16 +131,13 @@ body {
   height: 30px;
 }
 @media screen and (min-width: 768px) and (max-width: 1200px) {
-  .fonctionnement {
-    height: 220px;
-    padding: 20px 140px;
-    flex-direction: column;
+  .fonctionnement h1 {
+    padding-left: 90px;
   }
 }
-@media screen and (min-width: 1201) {
-  .fonctionnement {
-    height: 220px;
-    padding: 20px 140px;
+@media screen and (min-width: 12001px) and (max-width: 1440px) {
+  .fonctionnement h1 {
+    padding-left: 120px;
   }
 }
 
@@ -140,14 +147,18 @@ body {
   left: 0px;
   position: relative;
 }
-@media screen and (min-width: 768px) and (max-width: 1440px) {
+@media screen and (min-width: 768px) and (max-width: 1200px) {
   .position {
     flex-direction: row;
-    gap: 30px;
     flex-wrap: wrap;
     top: 120px;
     position: absolute;
-    padding-left: 140px;
+    padding-left: 80px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) and (min-width: 1201px) and (max-width: 1440px) {
+  .position {
+    padding-left: 120px;
   }
 }
 
@@ -158,7 +169,7 @@ body {
   border-radius: 20px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
   font-family: "Roboto", sans-serif;
-  width: 310px;
+  width: 300px;
   height: 72.4px;
   margin-bottom: 20px;
   box-sizing: border-box;
@@ -201,7 +212,7 @@ body {
 }
 @media screen and (min-width: 768px) and (max-width: 1440px) {
   .restaurant {
-    padding: 0px 140px;
+    padding: 0px 120px;
   }
 }
 
@@ -229,7 +240,7 @@ body {
 }
 @media screen and (min-width: 768px) and (max-width: 1440px) {
   .cadre {
-    width: 490px;
+    width: 375px;
   }
 }
 .cadre img {
@@ -238,6 +249,7 @@ body {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   object-fit: cover;
+  position: absolute;
 }
 .cadre .conteneur {
   display: flex;
@@ -245,7 +257,6 @@ body {
   width: 100%;
   margin-left: 20px;
   padding: 0px;
-  position: relative;
   text-decoration: none;
 }
 .cadre .conteneur .conteneurTitre {
@@ -267,14 +278,12 @@ body {
 }
 .cadre .conteneur .conteneurCoeur {
   display: flex;
-  position: relative;
   height: 30px;
   width: 31px;
   right: 70px;
   top: 15px;
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
   position: absolute;
+  text-decoration: none;
 }
 .cadre .etiquette {
   display: flex;
@@ -442,19 +451,24 @@ li {
 .sous-titre {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 600;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
 
 .description {
+  display: flex;
   text-overflow: ellipsis;
   white-space: nowrap;
   font-size: 15.043px;
   font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  align-items: center;
+  font-weight: 400;
+  justify-content: space-between;
+}
+.description span {
+  display: flex;
+  font-weight: 500;
 }
 
 .rectangle2 {
@@ -476,4 +490,12 @@ li {
   .rectangle2 {
     width: 604px;
   }
+}
+.rectangle2:active + .progress {
+  transform: scaleX(1);
+}
+
+.progress {
+  color: #99E2D0;
+  transform: scaleX(0);
 }/*# sourceMappingURL=styles.css.map */
