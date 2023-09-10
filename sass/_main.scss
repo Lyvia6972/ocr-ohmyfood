@@ -1,6 +1,6 @@
 *{
 //     // box-shadow: 0 0 0 3px red inset;
-        // outline: 1px solid blue;
+        outline: 1px solid blue;
 }
 
 
@@ -232,11 +232,11 @@ body {
 }
 
 
-.cadre {
+.cadre{
     background-color: white;
     border-radius: 15px;
-    width: 100%;
-    height: 271px;
+    width:100%;
+    height:271px;
     position:relative;
 
     @media screen and (min-width:768px) and (max-width:1440px){
@@ -248,17 +248,18 @@ body {
         height: 200px;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
-        object-fit: cover;
+        object-fit:cover;
+       
     }
     .conteneur {
-        display: flex;
+        display:flex;
         flex-direction: column;
         width: 100%;
         margin-left: 20px;
         // height: 90px;
         padding: 0px;
         position:relative;
-        text-decoration: none;
+        text-decoration:none;
 
         .conteneurTitre {
             @include h2;
@@ -266,12 +267,13 @@ body {
             margin: 0px;
             padding-top: 10px;
             width:100%;
+            text-decoration:none;
         }
 
         .conteneurTexte {
             display: flex;
             margin: 0px;
-            font-family: $font-family;
+            font-family:$font-family;
             font-size: 17px;
             font-weight: 300;
         }
@@ -291,7 +293,7 @@ body {
             position:absolute
         }
     }
-    .cadre__etiquette {
+    .etiquette {
             display: flex;
             background-color: $colorAnimation;
             color: #008766;
@@ -309,10 +311,22 @@ body {
             left: 63%;
             // justify-items: flex-end;
             position:absolute;
-            z-index: 5;
+            z-index:10px;
+           
         }
 }
 
+
+.fa-heart.fa-solid {
+    color:$button-gradient;
+    position:relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    top:30px;
+    right: 60px;
+    // &:active
+}
 
 
 

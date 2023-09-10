@@ -1,3 +1,7 @@
+* {
+  outline: 1px solid blue;
+}
+
 .main-container {
   display: flex;
   width: 100%;
@@ -252,6 +256,7 @@ body {
   margin: 0px;
   padding-top: 10px;
   width: 100%;
+  text-decoration: none;
 }
 .cadre .conteneur .conteneurTexte {
   display: flex;
@@ -271,7 +276,7 @@ body {
   border-top-right-radius: 0px;
   position: absolute;
 }
-.cadre .cadre__etiquette {
+.cadre .etiquette {
   display: flex;
   background-color: #99E2D0;
   color: #008766;
@@ -286,7 +291,17 @@ body {
   align-items: center;
   left: 63%;
   position: absolute;
-  z-index: 5;
+  z-index: 10px;
+}
+
+.fa-heart.fa-solid {
+  color: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  top: 30px;
+  right: 60px;
 }
 
 footer {
