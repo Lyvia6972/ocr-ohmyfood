@@ -242,6 +242,7 @@ body {
   margin-left: 20px;
   padding: 0px;
   position: relative;
+  text-decoration: none;
 }
 .cadre .conteneur .conteneurTitre {
   font-family: "Roboto", sans-serif;
@@ -349,6 +350,7 @@ li {
 
 .localisation2 {
   display: flex;
+  width: 100%;
 }
 .localisation2 img {
   height: 290px;
@@ -358,7 +360,7 @@ li {
 .en-tete2 {
   display: flex;
   align-items: center;
-  padding: 14px 89px 13px 80px;
+  justify-content: center;
   height: 63px;
   width: 100%;
   position: relative;
@@ -373,6 +375,8 @@ li {
 .fa-arrow-left {
   display: inline-flex;
   color: #353535;
+  position: absolute;
+  left: 25px;
 }
 
 .fond-arrondi {
@@ -386,6 +390,13 @@ li {
   width: 100%;
   position: relative;
   padding: 0px 17px;
+}
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .fond-arrondi {
+    width: 1055px;
+    margin: 0px 189px;
+    align-items: center;
+  }
 }
 .fond-arrondi .gros-titre {
   font-family: "Shrikhand", serif;
@@ -445,4 +456,9 @@ li {
   flex-direction: column;
   margin-top: 20px;
   justify-content: space-between;
+}
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .rectangle2 {
+    width: 604px;
+  }
 }/*# sourceMappingURL=styles.css.map */

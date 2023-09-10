@@ -258,6 +258,7 @@ body {
         // height: 90px;
         padding: 0px;
         position:relative;
+        text-decoration: none;
 
         .conteneurTitre {
             @include h2;
@@ -337,6 +338,7 @@ footer {
     }
 }
 
+
 ul {
     list-style: none;
     padding-left: 0px;
@@ -382,11 +384,13 @@ li {
 
 .localisation2{
     display: flex;
-
+    width: 100%;
         img{
 
             height: 290px;
             width: 100%;
+
+               
         }
 }
 
@@ -394,7 +398,8 @@ li {
     display: flex;
     // flex-direction: column;
     align-items: center;
-    padding: 14px 89px 13px 80px;
+    justify-content: center;
+    // padding: 14px 89px 13px 80px;
     height: 63px;
     width: 100%;
     position: relative;
@@ -411,6 +416,8 @@ li {
     display:inline-flex;
     // display:flex;
     color:$colorFooter;
+    position: absolute;
+    left:25px;
 
 }
 
@@ -425,6 +432,12 @@ li {
     width: 100%;
     position:relative;
     padding: 0px 17px;
+
+        @media screen and (min-width:768px) and (max-width:1440px) {
+            width: 1055px;
+            margin: 0px 189px;
+            align-items: center;
+        }
 
         .gros-titre {
             font-family: "Shrikhand", serif;
@@ -492,7 +505,10 @@ li {
     flex-direction: column;
     margin-top:20px;
     justify-content: space-between;
-   
+
+        @media screen and (min-width:768px) and (max-width:1440px) {
+            width:604px;
+        }
     
 }
     
