@@ -1,13 +1,12 @@
 *{
 //     // box-shadow: 0 0 0 3px red inset;
-        // outline: 1px solid blue;
+        outline: 1px solid blue;
 }
 
 
 .main-container {
     display: flex;
     width: 100%;
-    // max-width: 375px;
     box-sizing: border-box;
     flex-wrap: wrap;
     margin: 0px;
@@ -28,19 +27,17 @@ body {
 
 .en-tete {
     display: flex;
-    // flex-direction: column;
     align-items: center;
-    // padding: 14px 89px 13px 89px;
     height: 63px;
     width: 100%;
     position:relative;
     justify-content: center;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 
-    img {
-        width: 162px;
-        height: 44px;
-        padding: 0px;
+        img {
+            width: 162px;
+            height: 44px;
+            padding: 0px;
         
     }
 }
@@ -63,6 +60,7 @@ body {
     }
 }
 
+
 .exploration {
     @include flexMilieu;
     flex-direction: column;
@@ -71,11 +69,6 @@ body {
     height: 290px;
     background-color: $main-bg-color;
     font-family: $font-family;
-
-    @media screen and (min-width:768px) and (max-width:1440px) {
-        height: 220px;
-    }
-
 
     h1 {
         @include h1;
@@ -88,6 +81,7 @@ body {
         color: #353535;
         font-weight: 300;
     }
+   
 
 
 }
@@ -102,7 +96,7 @@ body {
     
     &:hover {
         background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
-        transform: scale(2.1);
+        
         
         // background: #002255;
     }
@@ -118,36 +112,14 @@ body {
     gap:30px;
     position:relative;
     
-    @media screen and (min-width: 768px) and (max-width:1200px) {
-    height: 298px;
-    padding: 20px 80px;
-    flex-direction: column;
-    
-    }
-
-
-    @media screen and (min-width:1201) and (max-width:1440px){
-    height: 220px;
-    padding:20px 120px ;
-    }
-
-
     h1 {
         @include h1;
-        margin: 30px 0px 0px 0px;
+        // margin: 40px 0px 0px 0px;
         height: 30px;
-
-        @media screen and (min-width:768px) and (max-width:1200px) {
-            padding-left:90px;
-            
-        }
-
-        @media screen and (min-width:12001px) and (max-width:1440px) {
-            padding-left: 120px;
-            
-        }
-
     }
+
+
+    
     
 }
 
@@ -158,31 +130,16 @@ body {
     left:0px;
     position:relative;
   
-    // align-items: center;
     
     
-    @media screen and (min-width: 768px)and (max-width:1200px) {
-        flex-direction: row;
-        // gap:30px;
-        flex-wrap: wrap;
-        top: 120px;
-        position:absolute;
-        padding-left: 80px;
-        
-       
-        @media screen and (min-width:1201px) and (max-width:1440px) {
-            padding-left: 120px;
-            
-        }
-    }
-
 }
+
 
 .rectangle {
     display: flex;
     align-items: center;
     @include formeRectangulaire;
-    width: 300px;
+    width: 100%;
     height: 72.4px;
     margin-bottom: 20px;
     box-sizing: border-box;
@@ -213,6 +170,7 @@ body {
         display: flex;
         margin: 0px 25px;
         gap: 25px;
+       
     }
 }
 
@@ -228,10 +186,7 @@ body {
         @include h1;
     }
 
-    @media screen and (min-width:768px) and (max-width:1440px) {
-        padding: 0px 120px;
-        
-    }
+   
 }
 
 .positionCadre {
@@ -241,11 +196,7 @@ body {
     flex-direction: column;
     gap: 30px;
 
-    @media screen and (min-width: 768px) {
-        flex-direction: row;
-        flex-wrap: wrap;
-        width: 100%;
-    }
+    
 
 
 }
@@ -258,9 +209,7 @@ body {
     height:271px;
     position:relative;
 
-    @media screen and (min-width:768px) and (max-width:1440px){
-        width: 375px;
-    }
+   
 
     img {
         width: 100%;
@@ -268,7 +217,7 @@ body {
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
         object-fit:cover;
-        position:absolute;
+        
        
     }
     .conteneur {
@@ -276,9 +225,7 @@ body {
         flex-direction: column;
         width: 100%;
         margin-left: 20px;
-        // height: 90px;
         padding: 0px;
-        // position:relative;
         text-decoration:none;
 
         .conteneurTitre {
@@ -319,14 +266,14 @@ body {
             height: 29px;
             box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
             // position: relative;
-            // right:-200px;
-            top: -250px;
+            right:12px;
+            top:12px;
             justify-content: center;
             align-items: center;
-            left: 63%;
+            // left: 63%;
             // justify-items: flex-end;
             position:absolute;
-            z-index:10px;
+            
            
         }
 }
@@ -356,15 +303,7 @@ footer {
     flex-direction: column;
     align-items: flex-start;
 
-    @media screen and (min-width:768px) and (max-width: 1440px) {
-        height: 54px;
-        flex-direction: row-reverse;
-        padding: 30px 25px;
-        justify-content: flex-end;
-        align-items: center;
-        gap:50px
-       
-    }
+   
 }
 
 
@@ -376,12 +315,7 @@ ul {
     width: 100%;
     margin: 0px;
 
-    @media screen and (min-width:768px) and (max-width:1440px) {
-        display: flex;
-        justify-content: flex-end;
-        align-content: stretch;
-        
-    }
+   
 }
 
 footer__h3 {
@@ -400,13 +334,7 @@ li {
     padding-top: 7px;
     gap: 10px;
 
-    @media screen and (min-width:768px) and (max-width:1440px) {
-        gap: 10px;
-        justify-content: space-around;
-        margin-right: 20px;
-
-        
-    }
+   
 }
 
 // * -_-_-_-_-_ Les pages des restaurants _-_-_-_-_-_-_-_-_/*
@@ -542,7 +470,7 @@ li {
     margin-top:20px;
     justify-content: space-between;
 
-        @media screen and (min-width:768px) and (max-width:1440px) {
+    @media screen and (min-width:768px) and (max-width:1440px) {
             width:604px;
         }
     
@@ -555,8 +483,189 @@ li {
         }
 }
 .progress{
+    width: 100px;
+    height: 73px;
+    border: 1px solid black;
     color:$colorAnimation;
     transform:scaleX(0);
 }
 
 
+/* test */
+
+.rectangle3 {
+    display: flex;
+    @include formeRectangulaire;
+    width: 100%;
+    height: 73px;
+    margin-bottom: 20px;
+    box-sizing:border-box;
+    padding:15px;
+    flex-direction: column;
+    margin-top:20px;
+    justify-content: space-between;
+
+        @media screen and (min-width:768px) and (max-width:1440px) {
+            width:604px;
+        }
+    
+    // &:active { 
+    //     &+ .progress{
+    //         transform:scaleX(1);
+
+    //     }
+            
+    //     }
+}
+.progress{
+    width: 100px;
+    height: 73px;
+    border: 1px solid black;
+    color:$colorAnimation;
+    // transform:scaleX(0);
+
+        // &__bar{
+        //     color:red;
+        //     transform:scaleX(0);
+        // }
+}
+
+
+.sous-titre2{
+    font-family: $font-family;
+    font-size: 18px;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+             
+    }
+
+
+.description2{
+    display:flex;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    font-size: 15.043px;
+    font-family: $font-family;
+    font-weight: 400;
+    justify-content:space-between;
+            
+        span{
+            display: flex;
+            font-weight: 500;
+                    
+        }
+}
+
+
+/*..........Le responsive.............*/
+
+
+@media screen and (min-width:768px) {
+    
+    .exploration {
+        height: 220px;
+
+       
+    }
+
+
+    .fonctionnement {
+         height: 298px;
+         padding: 20px 80px;
+         flex-direction: column;
+            
+        //    h1{
+        //        padding-left:80px;
+        //    }
+           
+        } 
+
+        
+    .position{
+        flex-direction: row;
+        gap:30px;
+        flex-wrap: nowrap;
+        top: 120px;
+        position:absolute;
+        padding-left: 80px;
+                      
+        }
+
+    .petiteIcone{
+        flex-wrap: nowrap;
+    }
+      
+    .restaurant{
+       padding: 0px 120px;
+            
+        }
+
+    .positionCadre{
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+       
+
+    }
+
+    .position{
+        padding-left: 120px;
+    }
+
+
+    .cadre{
+        width: 375px;
+        
+    }
+
+    footer{
+        height: 54px;
+        flex-direction: row-reverse;
+        padding: 30px 25px;
+        justify-content: flex-end;
+        align-items: center;
+        gap:50px
+           
+    }
+
+    ul{
+        display: flex;
+        justify-content: flex-end;
+         align-content: stretch;
+            
+    }
+
+    li{
+        gap: 10px;
+        justify-content: space-around;
+        margin-right: 20px;
+    
+    }
+
+}   
+            
+                                          
+                         
+            
+@media screen and (min-width:1201) {
+
+    .fontionnement{
+        height: 220px;
+        padding: 20px 120px ;
+        
+        
+        // h1 {
+        //     padding-left:120px;
+
+        // }
+    }
+
+
+    
+
+
+
+
+}

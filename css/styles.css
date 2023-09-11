@@ -1,7 +1,3 @@
-* {
-  outline: 1px solid blue;
-}
-
 .main-container {
   display: flex;
   width: 100%;
@@ -97,6 +93,7 @@ body {
 }
 .button:hover {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+  transform: scale(2.1);
 }
 
 .fonctionnement {
@@ -108,10 +105,11 @@ body {
   gap: 30px;
   position: relative;
 }
-.fonctionnement h1 {
+.fonctionnement__h1 {
   font-size: 24px;
   font-weight: 700;
   font-family: "Roboto", sans-serif;
+  margin: 30px 0px 0px 0px;
   height: 30px;
 }
 
@@ -129,7 +127,7 @@ body {
   border-radius: 20px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
   font-family: "Roboto", sans-serif;
-  width: 100%;
+  width: 300px;
   height: 72.4px;
   margin-bottom: 20px;
   box-sizing: border-box;
@@ -237,11 +235,11 @@ body {
   width: 80px;
   height: 29px;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-  right: 12px;
-  top: 12px;
   justify-content: center;
   align-items: center;
+  left: 63%;
   position: absolute;
+  z-index: 10px;
 }
 
 .fa-heart.fa-solid {
@@ -482,16 +480,15 @@ li {
     padding: 20px 80px;
     flex-direction: column;
   }
+  .fonctionnement .fonctionnement.h1 {
+    padding-left: 90px;
+  }
   .position {
     flex-direction: row;
-    gap: 30px;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     top: 120px;
     position: absolute;
     padding-left: 80px;
-  }
-  .petiteIcone {
-    flex-wrap: nowrap;
   }
   .restaurant {
     padding: 0px 120px;
@@ -530,5 +527,8 @@ li {
   .fontionnement {
     height: 220px;
     padding: 20px 120px;
+  }
+  .fontionnement__h1 {
+    padding-left: 120px;
   }
 }/*# sourceMappingURL=styles.css.map */
