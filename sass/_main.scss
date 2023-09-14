@@ -1,6 +1,6 @@
 *{
 //     // box-shadow: 0 0 0 3px red inset;
-        outline: 1px solid blue;
+        // outline: 1px solid blue;
 }
 
 
@@ -112,7 +112,7 @@ body {
     gap:30px;
     position:relative;
     
-    h1 {
+    .fonctionnement.h1 {
         @include h1;
         // margin: 40px 0px 0px 0px;
         height: 30px;
@@ -245,15 +245,15 @@ body {
             font-weight: 300;
         }
 
-        .conteneurCoeur {
-            display: flex;
-            height: 30px;
-            width: 31px;
-            right: 70px;
-            top: 15px;
-            position:absolute;
-            text-decoration: none;
-        }
+        // .conteneurCoeur {
+        //     display: flex;
+        //     height: 30px;
+        //     width: 31px;
+        //     right: 70px;
+        //     top: 15px;
+        //     position:absolute;
+        //     text-decoration: none;
+        // }
     }
     .etiquette {
             display: flex;
@@ -279,8 +279,35 @@ body {
 }
 
 
-.fa-heart.fa-solid {
-    color:$button-gradient;
+// .fa-heart .fa-solid {
+//     color:$button-gradient;
+//     position:relative;
+//     display: flex;
+//     justify-content: flex-end;
+//     align-items: center;
+//     top:30px;
+//     right: 60px;
+//     // &:active
+// }
+
+.i{
+    position:absolute;
+}
+
+
+.fa-heart.fa-regular{
+    color:$colorFooter;
+    position:relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    top:30px;
+    right: 60px;
+    // &:active
+}
+
+.fa-heart.fa-solid{
+    color:rgb(255, 0, 183);
     position:relative;
     display: flex;
     justify-content: flex-end;
@@ -371,7 +398,6 @@ li {
 
 .fa-arrow-left{
     display:inline-flex;
-    // display:flex;
     color:$colorFooter;
     position: absolute;
     left:25px;
@@ -390,18 +416,44 @@ li {
     position:relative;
     padding: 0px 17px;
 
-        @media screen and (min-width:768px) and (max-width:1440px) {
-            width: 1055px;
-            margin: 0px 189px;
-            align-items: center;
-        }
+       
 
         .gros-titre {
+            display: flex;
             font-family: "Shrikhand", serif;
             font-size: 28px;
+            flex-direction: row;
+            
             
         }
 }
+
+
+// .fa-heart2.fa-regular2{
+//     color:rgb(255, 187, 0);
+//     position:relative;
+//     display: flex;
+//     justify-content: flex-end;
+//     align-items: center;
+//     top:30px;
+//     right: 60px;
+//     // &:active
+// }
+
+// .fa-heart2.fa-solid2{
+//     color:rgb(43, 60, 155);
+//     // position:relative;
+//     display: flex;
+//     justify-content: flex-end;
+//     align-items: center;
+//     top:30px;
+//     right: 60px;
+//     z-index: 5;
+//     // &:active
+// }
+
+
+
 
 .entrees{
     margin-bottom: 30px;
@@ -576,16 +628,16 @@ li {
          padding: 20px 80px;
          flex-direction: column;
             
-        //    h1{
-        //        padding-left:80px;
-        //    }
+           .fonctionnement.h1{
+               padding-left:80px;
+           }
            
         } 
 
         
     .position{
         flex-direction: row;
-        gap:30px;
+        gap:50px;
         flex-wrap: nowrap;
         top: 120px;
         position:absolute;
@@ -606,17 +658,17 @@ li {
         flex-direction: row;
         flex-wrap: wrap;
         width: 100%;
-       
-
+        gap:30px;
     }
 
-    .position{
-        padding-left: 120px;
-    }
+    // .position{
+    //     padding-left: 0px;
+    //     gap:65px;
+    // }
 
 
     .cadre{
-        width: 375px;
+        width: 450px;
         
     }
 
@@ -645,27 +697,115 @@ li {
     }
 
 }   
-            
-                                          
-                         
-            
-@media screen and (min-width:1201) {
+       
 
-    .fontionnement{
+
+@media screen and (min-width:1201px) {
+
+    .fonctionnement{
         height: 220px;
         padding: 20px 120px ;
-        
-        
-        // h1 {
-        //     padding-left:120px;
 
-        // }
+
+    //    .fonctionnement.h1 {
+    //         padding-left:120px;
+
+    //     }
+    
+    }
+
+    .rectangle{
+        width: 360px;
+    }
+
+    .position{
+        padding-left: 120px;
     }
 
 
+}
+
+
+
+
+
+
+/*_-_-_-_-_-_-_-_-_le responsive des restaurants_-_-_-_-_-_-_-_-*/
+
+
+@media screen and (min-width:768px) {
     
 
+    .fond-arrondi{
+        
+            width: 1055px;
+            margin: 0px 189px;
+            align-items: center;
+        
+    }
+                             
+}
 
 
 
+/*-_-_-_-_-_-_-_-Loader_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
+
+.loader-container {
+    border-radius: 5px;
+    background: #333;
+    width: 400px;
+    height: 400px;
+    margin: 100px auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader{
+    display: block;
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 7px solid transparent;
+    border-top-color: #9356DC;
+    animation: spin 2s linear infinite;
+    // background: #2b0659;
+}
+
+.loader::before, .loader::after{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    border: 7px solid transparent;
+}
+
+.loader::before{
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border-top-color: #FF79DA;
+    animation: spin 3s linear infinite;
+    // background: black;
+}
+
+.loader::after{
+    top: 25px;
+    left: 25px;
+    right: 25px;
+    bottom: 25px;
+    border-top-color: #f6f6f6;
+    animation: spin 1.5s linear infinite;
+    // background: orange;
+
+}
+
+@keyframes spin {
+    0%{
+        transform: rotate(0deg)
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }
