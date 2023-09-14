@@ -522,9 +522,7 @@ li {
     margin-top:20px;
     justify-content: space-between;
 
-    @media screen and (min-width:768px) and (max-width:1440px) {
-            width:604px;
-        }
+   
     
     &:active { 
         &+ .progress{
@@ -611,7 +609,7 @@ li {
 }
 
 
-/*..........Le responsive.............*/
+/*..........Le responsive de le pade d'accueil.............*/
 
 
 @media screen and (min-width:768px) {
@@ -707,10 +705,10 @@ li {
         padding: 20px 120px ;
 
 
-    //    .fonctionnement.h1 {
-    //         padding-left:120px;
+       .fonctionnement.h1 {
+            padding-left:120px;
 
-    //     }
+        }
     
     }
 
@@ -743,7 +741,12 @@ li {
             align-items: center;
         
     }
-                             
+
+    .rectangle2{
+       
+            width:604px;
+    }
+                                 
 }
 
 

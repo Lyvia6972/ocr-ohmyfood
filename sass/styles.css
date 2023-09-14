@@ -399,11 +399,6 @@ li {
   margin-top: 20px;
   justify-content: space-between;
 }
-@media screen and (min-width: 768px) and (max-width: 1440px) {
-  .rectangle2 {
-    width: 604px;
-  }
-}
 .rectangle2:active + .progress {
   transform: scaleX(1);
 }
@@ -468,7 +463,7 @@ li {
   font-weight: 500;
 }
 
-/*..........Le responsive.............*/
+/*..........Le responsive de le pade d'accueil.............*/
 @media screen and (min-width: 768px) {
   .exploration {
     height: 220px;
@@ -528,6 +523,9 @@ li {
     height: 220px;
     padding: 20px 120px;
   }
+  .fonctionnement .fonctionnement.h1 {
+    padding-left: 120px;
+  }
   .rectangle {
     width: 360px;
   }
@@ -541,6 +539,9 @@ li {
     width: 1055px;
     margin: 0px 189px;
     align-items: center;
+  }
+  .rectangle2 {
+    width: 604px;
   }
 }
 /*-_-_-_-_-_-_-_-Loader_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
