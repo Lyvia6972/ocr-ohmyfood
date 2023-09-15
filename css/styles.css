@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .main-container {
   display: flex;
   width: 100%;
@@ -5,7 +6,6 @@
   flex-wrap: wrap;
   margin: 0px;
   padding: 0px;
-  text-decoration: none;
 }
 
 body {
@@ -13,9 +13,14 @@ body {
   justify-content: center;
   margin: 0px;
   padding: 0px;
+}
+
+a {
   text-decoration: none;
 }
 
+/*-_-_-_-_-_-_-_page d'accueil-_-_-_-_-_-_-_-_-_*/
+/********Section du logo********/
 .en-tete {
   display: flex;
   align-items: center;
@@ -31,6 +36,7 @@ body {
   padding: 0px;
 }
 
+/******Section de la localisation********/
 .localisation {
   display: flex;
   justify-content: center;
@@ -49,6 +55,7 @@ body {
   align-items: center;
 }
 
+/******Section de la réservation des menu**********/
 .exploration {
   display: flex;
   justify-content: center;
@@ -93,9 +100,9 @@ body {
 }
 .button:hover {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
-  transform: scale(2.1);
 }
 
+/********Section pour le fonctionnement*********/
 .fonctionnement {
   display: flex;
   height: 375px;
@@ -105,11 +112,10 @@ body {
   gap: 30px;
   position: relative;
 }
-.fonctionnement__h1 {
+.fonctionnement .fonctionnement.h1 {
   font-size: 24px;
   font-weight: 700;
   font-family: "Roboto", sans-serif;
-  margin: 30px 0px 0px 0px;
   height: 30px;
 }
 
@@ -127,7 +133,7 @@ body {
   border-radius: 20px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
   font-family: "Roboto", sans-serif;
-  width: 300px;
+  width: 100%;
   height: 72.4px;
   margin-bottom: 20px;
   box-sizing: border-box;
@@ -155,6 +161,7 @@ body {
   gap: 25px;
 }
 
+/******Section de la presentation des différents restaurants***********/
 .restaurant {
   background-color: #f6f6f6;
   width: 100%;
@@ -162,6 +169,7 @@ body {
   flex-direction: column;
   display: flex;
   text-decoration: none;
+  justify-items: center;
 }
 .restaurant h1 {
   font-size: 24px;
@@ -183,6 +191,7 @@ body {
   width: 100%;
   height: 271px;
   position: relative;
+  justify-content: center;
 }
 .cadre img {
   width: 100%;
@@ -216,15 +225,6 @@ body {
   font-size: 17px;
   font-weight: 300;
 }
-.cadre .conteneur .conteneurCoeur {
-  display: flex;
-  height: 30px;
-  width: 31px;
-  right: 70px;
-  top: 15px;
-  position: absolute;
-  text-decoration: none;
-}
 .cadre .etiquette {
   display: flex;
   background-color: #99E2D0;
@@ -235,15 +235,15 @@ body {
   width: 80px;
   height: 29px;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  right: 12px;
+  top: 12px;
   justify-content: center;
   align-items: center;
-  left: 63%;
   position: absolute;
-  z-index: 10px;
 }
 
-.fa-heart.fa-solid {
-  color: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+.fa-heart.fa-regular {
+  color: #353535;
   position: relative;
   display: flex;
   justify-content: flex-end;
@@ -252,6 +252,23 @@ body {
   right: 60px;
 }
 
+.fa-heart.fa-solid {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  top: 30px;
+  right: 60px;
+  opacity: 0;
+  transition: all 2s;
+}
+.fa-heart.fa-solid:hover {
+  opacity: 1;
+  color: transparent;
+  background-clip: text;
+}
+
+/*****************************Pied de page************************************/
 footer {
   background-color: #353535;
   width: 100%;
@@ -261,6 +278,14 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+footer h3 {
+  font-family: "Shrikhand", serif;
+  font-size: 18px;
+  font-weight: 400;
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 10px;
 }
 
 ul {
@@ -272,21 +297,13 @@ ul {
   margin: 0px;
 }
 
-footer__h3 {
-  font-family: "Shrikhand";
-  font-size: 18px;
-  font-weight: 400;
-  width: 100%;
-  margin-top: 15px;
-  margin-bottom: 10px;
-}
-
 li {
   display: flex;
   padding-top: 7px;
   gap: 10px;
 }
 
+/* -_-_-_-_-_ Les pages des restaurants _-_-_-_-_-_-_-_-_*/
 .localisation2 {
   display: flex;
   width: 100%;
@@ -294,6 +311,7 @@ li {
 .localisation2 img {
   height: 290px;
   width: 100%;
+  object-fit: cover;
 }
 
 .en-tete2 {
@@ -330,16 +348,36 @@ li {
   position: relative;
   padding: 0px 17px;
 }
-@media screen and (min-width: 768px) and (max-width: 1440px) {
-  .fond-arrondi {
-    width: 1055px;
-    margin: 0px 189px;
-    align-items: center;
-  }
-}
-.fond-arrondi .gros-titre {
+
+.gros-titre {
+  display: flex;
   font-family: "Shrikhand", serif;
   font-size: 28px;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+.gros-titre .fa-heart.fa-regular {
+  color: #353535;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  top: 0px;
+  right: 0px;
+}
+.gros-titre .fa-heart.fa-solid {
+  position: relative;
+  display: flex;
+  top: 0px;
+  right: 44px;
+  opacity: 0;
+  transition: all 1s;
+}
+.gros-titre .fa-heart.fa-solid:hover {
+  opacity: 1;
+  background-image: linear-gradient(193deg, #9356DC 50%, #FF79DA 50%);
+  background-clip: text;
 }
 
 .entrees {
@@ -400,11 +438,6 @@ li {
   flex-direction: column;
   margin-top: 20px;
   justify-content: space-between;
-}
-@media screen and (min-width: 768px) and (max-width: 1440px) {
-  .rectangle2 {
-    width: 604px;
-  }
 }
 .rectangle2:active + .progress {
   transform: scaleX(1);
@@ -470,7 +503,7 @@ li {
   font-weight: 500;
 }
 
-/*..........Le responsive.............*/
+/*.....................Le responsive de le pade d'accueil.............................*/
 @media screen and (min-width: 768px) {
   .exploration {
     height: 220px;
@@ -481,14 +514,18 @@ li {
     flex-direction: column;
   }
   .fonctionnement .fonctionnement.h1 {
-    padding-left: 90px;
+    padding-left: 80px;
   }
   .position {
     flex-direction: row;
-    flex-wrap: wrap;
+    gap: 50px;
+    flex-wrap: nowrap;
     top: 120px;
     position: absolute;
     padding-left: 80px;
+  }
+  .petiteIcone {
+    flex-wrap: nowrap;
   }
   .restaurant {
     padding: 0px 120px;
@@ -497,12 +534,10 @@ li {
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-  }
-  .position {
-    padding-left: 120px;
+    gap: 30px;
   }
   .cadre {
-    width: 375px;
+    width: 590px;
   }
   footer {
     height: 54px;
@@ -511,6 +546,9 @@ li {
     justify-content: flex-end;
     align-items: center;
     gap: 50px;
+  }
+  footer h3 {
+    width: 150px;
   }
   ul {
     display: flex;
@@ -523,12 +561,95 @@ li {
     margin-right: 20px;
   }
 }
-@media screen and (min-width: 1201) {
-  .fontionnement {
+@media screen and (min-width: 1201px) {
+  .fonctionnement {
     height: 220px;
     padding: 20px 120px;
   }
-  .fontionnement__h1 {
+  .fonctionnement .fonctionnement.h1 {
     padding-left: 120px;
   }
-}/*# sourceMappingURL=styles.css.map */
+  .rectangle {
+    width: 360px;
+  }
+  .position {
+    padding-left: 120px;
+  }
+}
+/*_-_-_-_-_-_-_-_-_le responsive des restaurants_-_-_-_-_-_-_-_-*/
+@media screen and (min-width: 768px) {
+  .fond-arrondi {
+    width: 1055px;
+    margin: 0px 189px;
+    align-items: center;
+  }
+  .rectangle2 {
+    width: 604px;
+  }
+}
+/*-_-_-_-_-_-_-_-Loader_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
+.loader-container {
+  border-radius: 5px;
+  background: #333;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  opacity: 0.99;
+  animation: stop-loader 0.5s 2s forwards;
+}
+
+.loader {
+  display: block;
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 7px solid transparent;
+  border-top-color: #9356DC;
+  animation: spin 2s linear infinite;
+}
+
+.loader::before, .loader::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border: 7px solid transparent;
+}
+
+.loader::before {
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border-top-color: #99E2D0;
+  animation: spin 3s linear infinite;
+}
+
+.loader::after {
+  top: 25px;
+  left: 25px;
+  right: 25px;
+  bottom: 25px;
+  border-top-color: #f6f6f6;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes stop-loader {
+  to {
+    transform: scale(0);
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

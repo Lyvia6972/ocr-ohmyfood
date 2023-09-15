@@ -11,7 +11,7 @@
     flex-wrap: wrap;
     margin: 0px;
     padding: 0px;
-    text-decoration:none;
+    // text-decoration:none;
 
 }
 
@@ -21,9 +21,18 @@ body {
     justify-content: center;
     margin: 0px;
     padding: 0px;
-    text-decoration:none;
+    // text-decoration:none;
     
 }
+
+
+a{
+    text-decoration: none;
+}
+
+/*-_-_-_-_-_-_-_page d'accueil-_-_-_-_-_-_-_-_-_*/
+
+/********Section du logo********/
 
 .en-tete {
     display: flex;
@@ -42,6 +51,7 @@ body {
     }
 }
 
+/******Section de la localisation********/
 
 .localisation {
     @include flexMilieu;
@@ -60,6 +70,9 @@ body {
     }
 }
 
+
+
+/******Section de la réservation des menu**********/
 
 .exploration {
     @include flexMilieu;
@@ -98,9 +111,12 @@ body {
         background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
         
         
-        // background: #002255;
+       
     }
 }
+
+
+/********Section pour le fonctionnement*********/
 
 .fonctionnement {
     display: flex;
@@ -108,7 +124,6 @@ body {
     width: 100%;
     flex-direction: column;
     padding: 0px 30px;
-    // flex-wrap: wrap;
     gap:30px;
     position:relative;
     
@@ -118,9 +133,7 @@ body {
         height: 30px;
     }
 
-
-    
-    
+       
 }
 
 
@@ -129,9 +142,7 @@ body {
     flex-direction: column;
     left:0px;
     position:relative;
-  
-    
-    
+      
 }
 
 
@@ -143,9 +154,6 @@ body {
     height: 72.4px;
     margin-bottom: 20px;
     box-sizing: border-box;
-    // flex-wrap: wrap;
-    // justify-content: space-around;
-    // gap: 10px;
     margin-left: 0px;
     font-size: 16px;
     font-weight: 500;
@@ -162,7 +170,6 @@ body {
         font-weight: 500;
         align-items: center;
         justify-content: center;
-        // position: absolute;
         transform: translate(-10px, 0px);
     }
 
@@ -174,6 +181,10 @@ body {
     }
 }
 
+
+
+/******Section de la presentation des différents restaurants***********/
+
 .restaurant {
     background-color: $main-bg-color;
     width: 100%;
@@ -181,6 +192,7 @@ body {
     flex-direction: column;
     display: flex;
     text-decoration: none;
+    justify-items: center;
 
     h1 {
         @include h1;
@@ -208,6 +220,7 @@ body {
     width:100%;
     height:271px;
     position:relative;
+    justify-content: center;
 
    
 
@@ -245,15 +258,7 @@ body {
             font-weight: 300;
         }
 
-        // .conteneurCoeur {
-        //     display: flex;
-        //     height: 30px;
-        //     width: 31px;
-        //     right: 70px;
-        //     top: 15px;
-        //     position:absolute;
-        //     text-decoration: none;
-        // }
+        
     }
     .etiquette {
             display: flex;
@@ -264,14 +269,12 @@ body {
             font-weight: 500;
             width: 80px;
             height: 29px;
-            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-            // position: relative;
+            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);         
             right:12px;
             top:12px;
             justify-content: center;
             align-items: center;
-            // left: 63%;
-            // justify-items: flex-end;
+            
             position:absolute;
             
            
@@ -279,20 +282,6 @@ body {
 }
 
 
-// .fa-heart .fa-solid {
-//     color:$button-gradient;
-//     position:relative;
-//     display: flex;
-//     justify-content: flex-end;
-//     align-items: center;
-//     top:30px;
-//     right: 60px;
-//     // &:active
-// }
-
-.i{
-    position:absolute;
-}
 
 
 .fa-heart.fa-regular{
@@ -303,22 +292,42 @@ body {
     align-items: center;
     top:30px;
     right: 60px;
-    // &:active
+    
 }
 
-.fa-heart.fa-solid{
-    color:rgb(255, 0, 183);
+.fa-heart.fa-solid{    
     position:relative;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     top:30px;
     right: 60px;
-    // &:active
+    opacity: 0;
+    transition: all 2s;
+    
+    &:hover{
+        opacity:1;
+        color:transparent;
+        // background-image: linear-gradient(#9356DC, #FF79DA);
+        background-clip: text;
+        
+    }
+
+
+    // &:hover{
+    //     opacity:1;
+    //     background: linear-gradient(#9356DC 40%, #FF79DA 60%);
+    //     background-clip: border-box;
+    //     -webkit-background-clip: text;
+    //     -webkit-text-fill-color: transparent;
+
+
+    // }
+
 }
 
 
-
+/*****************************Pied de page************************************/
 
 footer {
     background-color: $colorFooter;
@@ -330,7 +339,15 @@ footer {
     flex-direction: column;
     align-items: flex-start;
 
-   
+        h3 {
+            font-family: "Shrikhand", serif;
+            font-size: 18px;
+            font-weight: 400;
+            width: 100%;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        
+        }
 }
 
 
@@ -345,16 +362,7 @@ ul {
    
 }
 
-footer__h3 {
-    font-family: "Shrikhand";
-    font-size: 18px;
-    font-weight: 400;
-    width: 100%;
-    margin-top: 15px;
-    margin-bottom: 10px;
-    
-   
-}
+
 
 li {
     display: flex;
@@ -364,26 +372,24 @@ li {
    
 }
 
-// * -_-_-_-_-_ Les pages des restaurants _-_-_-_-_-_-_-_-_/*
+/* -_-_-_-_-_ Les pages des restaurants _-_-_-_-_-_-_-_-_*/
 
 .localisation2{
     display: flex;
     width: 100%;
 
         img{
-
             height: 290px;
             width: 100%;
-               
+            object-fit: cover;
         }
 }
 
+
 .en-tete2 {
     display: flex;
-    // flex-direction: column;
     align-items: center;
     justify-content: center;
-    // padding: 14px 89px 13px 80px;
     height: 63px;
     width: 100%;
     position: relative;
@@ -415,44 +421,48 @@ li {
     width: 100%;
     position:relative;
     padding: 0px 17px;
-
        
 
-        .gros-titre {
-            display: flex;
-            font-family: "Shrikhand", serif;
-            font-size: 28px;
-            flex-direction: row;
-            
-            
-        }
 }
 
 
-// .fa-heart2.fa-regular2{
-//     color:rgb(255, 187, 0);
-//     position:relative;
-//     display: flex;
-//     justify-content: flex-end;
-//     align-items: center;
-//     top:30px;
-//     right: 60px;
-//     // &:active
-// }
+.gros-titre {
+    display: flex;
+    font-family: "Shrikhand", serif;
+    font-size: 28px;
+    flex-direction: row;
+    align-items: center;
+    gap:20px;
+    
+        .fa-heart.fa-regular{
+            color:$colorFooter;
+            position:relative;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            top:0px;
+            right: 0px;
+            
+        }
 
-// .fa-heart2.fa-solid2{
-//     color:rgb(43, 60, 155);
-//     // position:relative;
-//     display: flex;
-//     justify-content: flex-end;
-//     align-items: center;
-//     top:30px;
-//     right: 60px;
-//     z-index: 5;
-//     // &:active
-// }
-
-
+        .fa-heart.fa-solid{
+            position:relative;
+            display: flex;
+            top:0px;
+            right:44px;
+            opacity: 0;
+            transition: all 1s;
+            
+            &:hover{
+                opacity:1;
+                // color:$colorAnimation;
+                background-image: linear-gradient(193deg, #9356DC 50%, #FF79DA 50%);
+                background-clip: text;
+                
+            }
+        }
+    
+}
 
 
 .entrees{
@@ -460,16 +470,14 @@ li {
   
 }
 
+
 .menu {
     color: black;
     font-family: $font-family;
     font-size: 16px;
     font-weight:300;
     display:inline;
-    gap:10px;
-    
-    
-    
+    gap:10px; 
 
     &::after {
         content:"";
@@ -484,6 +492,7 @@ li {
     }
 }
 
+
 .sous-titre{
     font-family: $font-family;
     font-size: 18px;
@@ -493,6 +502,7 @@ li {
     overflow: hidden;
  
 }
+
 
 .description{
     display:flex;
@@ -510,6 +520,7 @@ li {
     }
 }
 
+
 .rectangle2 {
     display: flex;
     @include formeRectangulaire;
@@ -521,8 +532,6 @@ li {
     flex-direction: column;
     margin-top:20px;
     justify-content: space-between;
-
-   
     
     &:active { 
         &+ .progress{
@@ -532,6 +541,8 @@ li {
             
         }
 }
+
+
 .progress{
     width: 100px;
     height: 73px;
@@ -609,7 +620,7 @@ li {
 }
 
 
-/*..........Le responsive de le pade d'accueil.............*/
+/*.....................Le responsive de le pade d'accueil.............................*/
 
 
 @media screen and (min-width:768px) {
@@ -617,7 +628,6 @@ li {
     .exploration {
         height: 220px;
 
-       
     }
 
 
@@ -650,7 +660,7 @@ li {
     .restaurant{
        padding: 0px 120px;
             
-        }
+    }
 
     .positionCadre{
         flex-direction: row;
@@ -659,14 +669,9 @@ li {
         gap:30px;
     }
 
-    // .position{
-    //     padding-left: 0px;
-    //     gap:65px;
-    // }
-
-
-    .cadre{
-        width: 450px;
+   
+    .cadre{                           //cadre des restaurrants de le page d'accueil
+        width:590px;
         
     }
 
@@ -676,7 +681,11 @@ li {
         padding: 30px 25px;
         justify-content: flex-end;
         align-items: center;
-        gap:50px
+        gap:50px;
+
+            h3{
+                width: 150px;
+            }
            
     }
 
@@ -756,12 +765,15 @@ li {
 .loader-container {
     border-radius: 5px;
     background: #333;
-    width: 400px;
-    height: 400px;
-    margin: 100px auto 0;
+    width: 100vw;
+    height:100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    z-index:1;
+    opacity: 0.99;
+    animation: stop-loader 0.5s 2s forwards;
 }
 
 .loader{
@@ -773,7 +785,7 @@ li {
     border: 7px solid transparent;
     border-top-color: #9356DC;
     animation: spin 2s linear infinite;
-    // background: #2b0659;
+
 }
 
 .loader::before, .loader::after{
@@ -788,9 +800,9 @@ li {
     left: 10px;
     right: 10px;
     bottom: 10px;
-    border-top-color: #FF79DA;
+    border-top-color:$colorAnimation;
     animation: spin 3s linear infinite;
-    // background: black;
+    
 }
 
 .loader::after{
@@ -800,7 +812,7 @@ li {
     bottom: 25px;
     border-top-color: #f6f6f6;
     animation: spin 1.5s linear infinite;
-    // background: orange;
+    
 
 }
 
@@ -812,3 +824,9 @@ li {
         transform: rotate(360deg);
     }
 }
+
+@keyframes stop-loader {
+    to { transform: scale(0); }
+}
+
+
