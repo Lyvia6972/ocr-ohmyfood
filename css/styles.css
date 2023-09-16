@@ -422,6 +422,7 @@ li {
 .description span {
   display: flex;
   font-weight: 500;
+  width: 30px;
 }
 
 .rectangle2 {
@@ -439,19 +440,8 @@ li {
   margin-top: 20px;
   justify-content: space-between;
 }
-.rectangle2:active + .progress {
-  transform: scaleX(1);
-}
 
-.progress {
-  width: 100px;
-  height: 73px;
-  border: 1px solid black;
-  color: #99E2D0;
-  transform: scaleX(0);
-}
-
-/* test */
+/********* test *********/
 .rectangle3 {
   display: flex;
   background-color: #f6f6f6;
@@ -462,47 +452,40 @@ li {
   height: 73px;
   margin-bottom: 20px;
   box-sizing: border-box;
-  padding: 15px;
+  padding: 10px;
   flex-direction: column;
   margin-top: 20px;
   justify-content: space-between;
+  overflow: hidden;
+  position: relative;
 }
-@media screen and (min-width: 768px) and (max-width: 1440px) {
-  .rectangle3 {
-    width: 604px;
-  }
+.rectangle3:hover .progress {
+  animation: progress 2s ease forwards;
 }
 
 .progress {
-  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
   height: 73px;
-  border: 1px solid black;
-  color: #99E2D0;
+  color: white;
+  background-color: #99E2D0;
+  right: 0px;
+  position: absolute;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  top: 0px;
 }
 
-.sous-titre2 {
-  font-family: "Roboto", sans-serif;
-  font-size: 18px;
-  font-weight: 600;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
+@keyframes progress {
+  from {
+    right: -52px;
+  }
+  to {
+    right: 0px;
+  }
 }
-
-.description2 {
-  display: flex;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  font-size: 15.043px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  justify-content: space-between;
-}
-.description2 span {
-  display: flex;
-  font-weight: 500;
-}
-
 /*.....................Le responsive de le pade d'accueil.............................*/
 @media screen and (min-width: 768px) {
   .exploration {
