@@ -376,7 +376,7 @@ li {
 }
 .gros-titre .fa-heart.fa-solid:hover {
   opacity: 1;
-  background-image: linear-gradient(193deg, #9356DC 50%, #FF79DA 50%);
+  color: #99E2D0;
   background-clip: text;
 }
 
@@ -408,6 +408,8 @@ li {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  display: flex;
+  text-overflow: ellipsis;
 }
 
 .description {
@@ -418,11 +420,7 @@ li {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   justify-content: space-between;
-}
-.description span {
-  display: flex;
-  font-weight: 500;
-  width: 30px;
+  overflow: hidden;
 }
 
 .rectangle2 {
@@ -453,39 +451,68 @@ li {
   margin-bottom: 20px;
   box-sizing: border-box;
   padding: 10px;
-  flex-direction: column;
   margin-top: 20px;
   justify-content: space-between;
   overflow: hidden;
-  position: relative;
+  white-space: nowrap;
 }
 .rectangle3:hover .progress {
   animation: progress 2s ease forwards;
+  cursor: pointer;
+}
+.rectangle3 span {
+  display: flex;
+  font-weight: 600;
+  width: 30px;
+  padding: 0px 2px;
+  align-items: flex-end;
+  padding-bottom: 12px;
 }
 
 .progress {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 250px;
+  width: 150px;
   height: 73px;
   color: white;
   background-color: #99E2D0;
-  right: 0px;
-  position: absolute;
+  right: -10px;
+  position: relative;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
-  top: 0px;
+  top: -10px;
 }
 
 @keyframes progress {
   from {
-    right: -52px;
+    right: -252px;
   }
   to {
-    right: 0px;
+    right: -10px;
   }
 }
+.description2 {
+  display: flex;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 15.043px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.sous-titre2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  display: flex;
+}
+
 /*.....................Le responsive de le pade d'accueil.............................*/
 @media screen and (min-width: 768px) {
   .exploration {

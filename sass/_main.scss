@@ -455,8 +455,8 @@ li {
             
             &:hover{
                 opacity:1;
-                // color:$colorAnimation;
-                background-image: linear-gradient(193deg, #9356DC 50%, #FF79DA 50%);
+                color:$colorAnimation;
+                // background-image: linear-gradient(193deg, #9356DC 50%, #FF79DA 50%);
                 background-clip: text;
                 
             }
@@ -500,6 +500,8 @@ li {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+    display: flex;
+    text-overflow:ellipsis;
  
 }
 
@@ -512,13 +514,8 @@ li {
     font-family: $font-family;
     font-weight: 400;
     justify-content:space-between;
+    overflow: hidden;
 
-    span{
-        display: flex;
-        font-weight: 500;
-        width: 30px;
-        
-    }
 }
 
 
@@ -534,23 +531,7 @@ li {
     margin-top:20px;
     justify-content: space-between;
     
-    // &:active { 
-    //     &+ .progress{
-    //         transform:scaleX(1);
-
-    //     }
-            
-    //     }
 }
-
-
-// .progress{
-//     width: 100px;
-//     height: 73px;
-//     border: 1px solid black;
-//     color:$colorAnimation;
-//     transform:scaleX(0);
-// }
 
 
 /********* test *********/
@@ -563,67 +544,73 @@ li {
     margin-bottom: 20px;
     box-sizing:border-box;
     padding:10px;
-    flex-direction:column;
     margin-top:20px;
     justify-content:space-between;
     overflow:hidden;
-    position: relative;
+    white-space:nowrap;
     
-        &:hover .progress{
-            animation:progress 2s ease forwards;
-        }
-
+    &:hover .progress{
+        animation:progress 2s ease forwards;
+        cursor:pointer;
+    }
     
-}
-
-.progress{
-    @include flexMilieu;
-    width: 250px;
-    height: 73px;
-    color:white;
-    background-color:$colorAnimation;
-    right: 0px;
-    // z-index:2;
-    position:absolute;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius:20px;
-    top:0px;
-
-}
-
-@keyframes progress{
-    from {right: -52px;}
-    to {right: 0px;}
-
-}
-
-// .sous-titre2{
-//     font-family: $font-family;
-//     font-size: 18px;
-//     font-weight: 600;
-//     text-overflow: ellipsis;
-//     white-space: nowrap;
-//     overflow: hidden;
-             
-//     }
-
-
-// .description2{
-//     display:flex;
-//     text-overflow:ellipsis;
-//     white-space:nowrap;
-//     font-size: 15.043px;
-//     font-family: $font-family;
-//     font-weight: 400;
-//     justify-content:space-between;
+    
+    span{
+            display: flex;
+            font-weight: 600;
+            width: 30px;
+            padding:0px 2px;
+            align-items: flex-end;
+            padding-bottom: 12px; 
             
-//         span{
-//             display: flex;
-//             font-weight: 500;
-                    
-//         }
-// }
-
+        }
+    }
+    
+.progress{
+        @include flexMilieu;
+        width: 150px;
+        height: 73px;
+        color:white;
+        background-color:$colorAnimation;
+        right: -10px;
+        // z-index:2;
+        position:relative;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius:20px;
+        top:-10px;
+        
+    }
+    
+@keyframes progress{
+        from {right: -252px;}
+        to {right: -10px;}
+        
+    }
+    
+    
+.description2{
+        display:flex;
+        text-overflow:ellipsis;
+        white-space:nowrap;
+        font-size: 15.043px;
+        font-family: $font-family;
+        font-weight: 400;
+        justify-content:space-between;
+        overflow: hidden;
+    
+    }
+    
+.sous-titre2{
+        font-family: $font-family;
+        font-size: 18px;
+        font-weight: 600;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        display: flex;
+        
+     
+    }
 /*.....................Le responsive de le pade d'accueil.............................*/
 
 
