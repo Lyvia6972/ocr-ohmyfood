@@ -1,0 +1,271 @@
+
+/* -_-_-_-_-_ Les pages des restaurants _-_-_-_-_-_-_-_-_*/
+
+.localisation2{
+    display: flex;
+    width: 100%;
+
+        img{
+            height: 290px;
+            width: 100%;
+            object-fit: cover;
+        }
+}
+
+
+.en-tete2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 63px;
+    width: 100%;
+    position: relative;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+
+    img {
+        width: 162px;
+        height: 44px;
+        padding: 0px;
+    }
+}
+
+.fa-arrow-left{
+    display:inline-flex;
+    color:$colorFooter;
+    position: absolute;
+    left:25px;
+
+}
+
+.fond-arrondi {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $main-bg-color;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    top:-60px;
+    width: 100%;
+    position:relative;
+    padding: 0px 17px;
+       
+
+}
+
+
+.gros-titre {
+    display: flex;
+    font-family: "Shrikhand", serif;
+    font-size: 28px;
+    flex-direction: row;
+    align-items: center;
+    gap:20px;
+    
+        .coeur-vide{
+            // color:$colorFooter;
+            position:relative;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            top:0px;
+            right: 0px;
+            
+            
+        }
+
+        .coeur-rempli{
+            position:relative;
+            display: flex;
+            top:0px;
+            right:44px;
+            opacity: 0;
+            transition: all 1s;
+            
+            &:hover{
+                opacity:1;
+                // color:$colorAnimation;
+                background-image: linear-gradient(to top, #9356DC, #FF79DA);
+                background-clip: text;
+                
+            }
+        }
+    
+}
+
+
+.entrees{
+    margin-bottom: 30px;
+  
+}
+
+
+.menu {
+    color: black;
+    font-family: $font-family;
+    font-size: 16px;
+    font-weight:300;
+    display:inline;
+    gap:10px; 
+
+    &::after {
+        content:"";
+        display: block;
+        position: absolute;
+        width: 40px;
+        height: 3px;
+        background: #99e2d0;
+        
+    
+
+    }
+}
+
+
+.sous-titre{
+    font-family: $font-family;
+    font-size: 18px;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: flex;
+    text-overflow:ellipsis;
+ 
+}
+
+
+.description{
+    display:flex;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    font-size: 15.043px;
+    font-family: $font-family;
+    font-weight: 400;
+    justify-content:space-between;
+    overflow: hidden;
+
+}
+
+
+.rectangle2 {
+    display: flex;
+    @include formeRectangulaire;
+    width: 100%;
+    height: 73px;
+    margin-bottom: 20px;
+    box-sizing:border-box;
+    padding:15px;
+    flex-direction: column;
+    margin-top:20px;
+    justify-content: space-between;
+    
+}
+
+
+/**************** test **********************/
+
+.rectangle3 {
+    display: flex;
+    @include formeRectangulaire;
+    width: 100%;
+    height: 73px;
+    margin-bottom: 20px;
+    box-sizing:border-box;
+    padding:10px;
+    margin-top:20px;
+    justify-content:space-between;
+    overflow:hidden;
+    white-space:nowrap;
+    
+    &:hover .progress{
+        animation:progress 2s ease /*forwards*/;
+        cursor:pointer;
+    }
+    
+    
+    span{
+            display: flex;
+            font-weight: 600;
+            width: 30px;
+            padding:0px 2px;
+            align-items: flex-end;
+            padding-bottom: 12px; 
+            
+        }
+    }
+    
+.progress{
+        @include flexMilieu;
+        width: 150px;
+        height: 73px;
+        color:white;
+        background-color:$colorAnimation;
+        right: -10px;
+        // z-index:2;
+        position:relative;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius:20px;
+        top:-10px;
+        
+    }
+    
+@keyframes progress{
+        from {right: -252px;}
+        to {right: -10px;}
+        
+    }
+    
+.conteneur-descriptif{
+    display: flex;
+    text-overflow:ellipsis;
+    overflow: hidden;
+}
+
+
+.description2{
+        display:flex;
+        text-overflow:ellipsis;
+        white-space:nowrap;
+        font-size: 15.043px;
+        font-family: $font-family;
+        font-weight: 400;
+        justify-content:space-between;
+        overflow: hidden;
+    
+    }
+    
+.sous-titre2{
+        font-family: $font-family;
+        font-size: 18px;
+        font-weight: 600;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        display: flex;
+        
+     
+    }
+
+
+
+/*_-_-_-_-_-_-_-_-_le responsive des restaurants_-_-_-_-_-_-_-_-*/
+
+
+@media screen and (min-width:768px) {
+    
+
+    .fond-arrondi{
+        
+            width: 1055px;
+            margin: 0px 189px;
+            align-items: center;
+        
+    }
+
+    .rectangle2{
+       
+            width:604px;
+    }
+                                 
+}
+
