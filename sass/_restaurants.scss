@@ -1,6 +1,20 @@
 
 /* -_-_-_-_-_ Les pages des restaurants _-_-_-_-_-_-_-_-_*/
 
+.main-container2 {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    margin: 0px;
+    padding: 0px;
+    justify-content: center;
+   
+
+}
+
+
+
 .localisation2{
     display: flex;
     width: 100%;
@@ -21,6 +35,7 @@
     width: 100%;
     position: relative;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+    font-size: 28px;
 
     img {
         width: 162px;
@@ -29,7 +44,7 @@
     }
 }
 
-.fa-arrow-left{
+.fleche{
     display:inline-flex;
     color:$colorFooter;
     position: absolute;
@@ -69,26 +84,41 @@
             align-items: center;
             top:0px;
             right: 0px;
-            
+            /*rajouté pour le test*/
+            font-size: 25px;
+
+            /*test*/
+            &:hover{
+                // background-image:linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+                // background-clip: text;
+                // -webkit-background-clip: text;
+                // color:transparent;
+                // border:none;
+                // transition: all 2s;
+                // font-weight: 800;
+
+                background-color: #FF79DA;
+                border: none;
+            }
             
         }
 
-        .coeur-rempli{
-            position:relative;
-            display: flex;
-            top:0px;
-            right:44px;
-            opacity: 0;
-            transition: all 1s;
+        // .coeur-rempli{
+        //     position:relative;
+        //     display: flex;
+        //     top:0px;
+        //     right:44px;
+        //     opacity: 0;
+        //     transition: all 1s;
             
-            &:hover{
-                opacity:1;
-                // color:$colorAnimation;
-                background-image: linear-gradient(to top, #9356DC, #FF79DA);
-                background-clip: text;
+        //     &:hover{
+        //         opacity:1;
+        //         // color:$colorAnimation;
+        //         background-image: linear-gradient(to top, #9356DC, #FF79DA);
+        //         background-clip: text;
                 
-            }
-        }
+        //     }
+        // }
     
 }
 
@@ -164,64 +194,76 @@
 
 /**************** test **********************/
 
+   
 .rectangle3 {
     display: flex;
     @include formeRectangulaire;
     width: 100%;
-    height: 73px;
-    margin-bottom: 20px;
-    box-sizing:border-box;
-    padding:10px;
-    margin-top:20px;
-    justify-content:space-between;
+    text-align: left;
+    cursor: pointer;
     overflow:hidden;
-    white-space:nowrap;
+    flex-direction: column;
+    height: 73px;
+    align-items: center;
     
+
     &:hover .progress{
         animation:progress 2s ease /*forwards*/;
-        cursor:pointer;
+
+    }
+       
     }
     
-    
-    span{
-            display: flex;
-            font-weight: 600;
-            width: 30px;
-            padding:0px 2px;
-            align-items: flex-end;
-            padding-bottom: 12px; 
-            
-        }
-    }
-    
+  
+
 .progress{
         @include flexMilieu;
-        width: 150px;
+        width: 120px;
         height: 73px;
         color:white;
         background-color:$colorAnimation;
-        right: -10px;
+        right: -113px;
         // z-index:2;
         position:relative;
         border-top-right-radius: 20px;
         border-bottom-right-radius:20px;
-        top:-10px;
+        top:0px;
+        transition:all 0.5s;
         
     }
     
 @keyframes progress{
-        from {right: -252px;}
-        to {right: -10px;}
+        from {right: -100px;}
+        to {right: 0px;}
         
     }
-    
+
+
+   
 .conteneur-descriptif{
     display: flex;
-    text-overflow:ellipsis;
-    overflow: hidden;
+    // text-overflow:ellipsis;
+    // overflow: hidden;
+
+    /*_-_-_-ajout selon modele hihihi-_-_-_-*/
+    width:100%;
+    flex-direction: row;
+    justify-content: space-between;
+
 }
 
 
+// .description2{
+//         display:flex;
+//         text-overflow:ellipsis;
+//         white-space:nowrap;
+//         font-size: 15.043px;
+//         font-family: $font-family;
+//         font-weight: 400;
+//         justify-content:space-between;
+//         overflow: hidden;
+    
+//     }
 .description2{
         display:flex;
         text-overflow:ellipsis;
@@ -229,9 +271,46 @@
         font-size: 15.043px;
         font-family: $font-family;
         font-weight: 400;
-        justify-content:space-between;
+        justify-content:center;
         overflow: hidden;
+        width:90%;
+        flex-direction: column;
+        padding-left: 10px;
+        position: relative;
+        
+
+            span{
+                display: flex;
+                justify-content:right;
+                align-items: center;
+                padding-top: 30px;
+                padding-right: 8px;
+                width: 10%;
+                font-weight: 700;
+                height: 51px;
+                position:absolute;
+                right:0px;
+            }
+
+
+            h3{
+                margin:5px 0px;
+                overflow:hidden;
+                text-overflow: ellipsis;
+            }
     
+            p{
+                margin:3px 0px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                font-family: $font-family;
+                font-size: 18px;
+                font-weight: 400;
+                white-space: nowrap;
+               
+                display: flex;
+            }
+
     }
     
 .sous-titre2{
@@ -247,6 +326,41 @@
     }
 
 
+.positionBtnCmd{
+    display: flex;
+    justify-content: center;
+}
+
+
+.button2 {
+        @include btnViolet;
+        @include flexMilieu;
+        width: 218px;
+        margin-top: 16px;
+        transition: background 2s;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: center;
+        
+        
+        &:hover {
+            background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
+          
+           
+        }
+    
+    
+        .button a{
+            text-decoration: none;
+        }
+        
+        
+        .butoon a:visited{
+            text-decoration: none;
+            color:inherit;
+        }
+    
+    }
 
 /*_-_-_-_-_-_-_-_-_le responsive des restaurants_-_-_-_-_-_-_-_-*/
 
@@ -257,7 +371,7 @@
     .fond-arrondi{
         
             width: 1055px;
-            margin: 0px 189px;
+            // margin: 0px 189px;
             align-items: center;
         
     }
