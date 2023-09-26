@@ -75,6 +75,7 @@
     flex-direction: row;
     align-items: center;
     gap:20px;
+    justify-content: center;
     
         .coeur-vide{
             // color:$colorFooter;
@@ -135,7 +136,8 @@
     font-size: 16px;
     font-weight:300;
     display:inline;
-    gap:10px; 
+    gap:10px;
+    margin-top:55px; 
 
     &::after {
         content:"";
@@ -145,126 +147,86 @@
         height: 3px;
         background: #99e2d0;
         
-    
-
     }
+}
+   
+
+.rectangle {
+    display: flex;
+    @include formeRectangulaire;
+    width: 100%;
+    cursor: pointer;
+    overflow:hidden;
+    height: 73px;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    gap: 50px;
+    margin-top: 20px;        
+
 }
 
 
-.sous-titre{
-    font-family: $font-family;
-    font-size: 18px;
-    font-weight: 600;
+.texte{
+    display: flex;
+    overflow: hidden;
+}
+
+
+.descriptionTitre{
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    display: flex;
-    text-overflow:ellipsis;
- 
+    font-weight: 500;
+    font-size: 18px;
+    margin: 0px;
 }
 
-
-.description{
-    display:flex;
-    text-overflow:ellipsis;
-    white-space:nowrap;
-    font-size: 15.043px;
-    font-family: $font-family;
-    font-weight: 400;
-    justify-content:space-between;
+.descriptiontTexte{
+    margin-top: 5px;
+    font-weight: 300;
+    font-size: 15.04px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     overflow: hidden;
-
 }
 
 
-.rectangle2 {
+.prix{
     display: flex;
-    @include formeRectangulaire;
-    width: 100%;
-    height: 73px;
-    margin-bottom: 20px;
-    box-sizing:border-box;
-    padding:15px;
-    flex-direction: column;
-    margin-top:20px;
-    justify-content: space-between;
-    
+    gap: 20px;
+    margin-right: -80px;
+    transition: margin-right 0.8s ease-in-out;
+
+        &:hover{
+            margin-right:0px;
+        }
 }
 
 
-/**************** test **********************/
-
-   
-.rectangle3 {
+.montant{
     display: flex;
-    @include formeRectangulaire;
-    width: 100%;
-    text-align: left;
-    cursor: pointer;
-    overflow:hidden;
     flex-direction: column;
-    height: 73px;
-    align-items: center;
-    
+    justify-content: flex-end;
+    padding-bottom: 12px;
+    font-size: 15px;
+    font-weight: 700;
+}
 
-    &:hover .progress{
-        animation:progress 2s ease /*forwards*/;
-
-    }
-       
-    }
-    
-  
 
 .progress{
         @include flexMilieu;
-        width: 120px;
+        width: 60px;
         height: 73px;
         color:white;
         background-color:$colorAnimation;
-        right: -113px;
-        // z-index:2;
-        position:relative;
+        padding-left:15px;
         border-top-right-radius: 20px;
         border-bottom-right-radius:20px;
-        top:0px;
-        transition:all 0.5s;
+       
         
     }
-    
-@keyframes progress{
-        from {right: -100px;}
-        to {right: 0px;}
-        
-    }
-
-
-   
-.conteneur-descriptif{
-    display: flex;
-    // text-overflow:ellipsis;
-    // overflow: hidden;
-
-    /*_-_-_-ajout selon modele hihihi-_-_-_-*/
-    width:100%;
-    flex-direction: row;
-    justify-content: space-between;
-
-}
-
-
-// .description2{
-//         display:flex;
-//         text-overflow:ellipsis;
-//         white-space:nowrap;
-//         font-size: 15.043px;
-//         font-family: $font-family;
-//         font-weight: 400;
-//         justify-content:space-between;
-//         overflow: hidden;
-    
-//     }
-.description2{
+ 
+.description{
         display:flex;
         text-overflow:ellipsis;
         white-space:nowrap;
@@ -276,54 +238,7 @@
         width:90%;
         flex-direction: column;
         padding-left: 10px;
-        position: relative;
-        
-
-            span{
-                display: flex;
-                justify-content:right;
-                align-items: center;
-                padding-top: 30px;
-                padding-right: 8px;
-                width: 10%;
-                font-weight: 700;
-                height: 51px;
-                position:absolute;
-                right:0px;
-            }
-
-
-            h3{
-                margin:5px 0px;
-                overflow:hidden;
-                text-overflow: ellipsis;
-            }
-    
-            p{
-                margin:3px 0px;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                font-family: $font-family;
-                font-size: 18px;
-                font-weight: 400;
-                white-space: nowrap;
-               
-                display: flex;
-            }
-
-    }
-    
-.sous-titre2{
-        font-family: $font-family;
-        font-size: 18px;
-        font-weight: 600;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
-        display: flex;
-        
-     
-    }
+}   
 
 
 .positionBtnCmd{
@@ -371,7 +286,7 @@
     .fond-arrondi{
         
             width: 1055px;
-            // margin: 0px 189px;
+        
             align-items: center;
         
     }
