@@ -193,7 +193,6 @@ body {
 
 .positionRestauTotal {
   max-width: 1040px;
-  margin: 0px auto;
 }
 
 .positionCadre {
@@ -270,36 +269,32 @@ body {
 }
 
 .coeur-vide {
-  position: relative;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  top: 30px;
-  right: 20px;
-  /*rajouté pour le test*/
   font-size: 25px;
-  /*test*/
-}
-.coeur-vide:hover {
-  background-color: #FF79DA;
-  border: none;
 }
 
 .coeur-rempli {
-  position: relative;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  top: 30px;
-  right: 0px;
   opacity: 0;
   transition: all 2s;
+  font-size: 25px;
 }
 .coeur-rempli:hover {
   opacity: 1;
   color: transparent;
   background-image: linear-gradient(#9356DC, #FF79DA);
   background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.coeurSuperpose2 {
+  display: flex;
+  top: 20px;
+  right: 58px;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.coeur-vide, .coeur-rempli {
+  position: absolute;
 }
 
 /*****************************Pied de page************************************/
@@ -357,7 +352,7 @@ li {
     justify-content: center;
     padding-top: 50px;
     padding-bottom: 50px;
-    padding-left: 0px;
+    padding-left: 25px;
   }
   .fonctionnement .fonctionnement.h1 {
     padding-left: 80px;
@@ -376,6 +371,9 @@ li {
     flex-wrap: wrap;
     gap: 15px;
   }
+  .positionRestauTotal {
+    margin: 0px auto;
+  }
   .positionCadre {
     flex-direction: row;
     flex-wrap: wrap;
@@ -392,10 +390,9 @@ li {
   footer {
     height: 54px;
     flex-direction: row-reverse;
-    padding: 30px 0px;
+    padding: 30px 0px 10px 0px;
     justify-content: flex-end;
     align-items: center;
-    gap: 50px;
   }
   footer h3 {
     width: 150px;
@@ -412,7 +409,7 @@ li {
   }
 }
 /*-_-_-_-_-_-_-_-Loader_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
-.loader-container {
+.loader-container { /* Fond gris fonce*/
   border-radius: 5px;
   background: #333;
   width: 100vw;
@@ -426,7 +423,7 @@ li {
   animation: stop-loader 0.5s 2s forwards;
 }
 
-.loader {
+.loader { /*1er cercle*/
   display: block;
   position: absolute;
   width: 250px;
@@ -444,7 +441,7 @@ li {
   border: 7px solid transparent;
 }
 
-.loader::before {
+.loader::before { /*3eme et plus petit cercle*/
   top: 10px;
   left: 10px;
   right: 10px;
@@ -453,7 +450,7 @@ li {
   animation: spin 3s linear infinite;
 }
 
-.loader::after {
+.loader::after { /*2eme cercle*/
   top: 25px;
   left: 25px;
   right: 25px;
@@ -462,7 +459,7 @@ li {
   animation: spin 1.5s linear infinite;
 }
 
-@keyframes spin {
+@keyframes spin { /*rotation des cercles*/
   0% {
     transform: rotate(0deg);
   }
@@ -470,7 +467,7 @@ li {
     transform: rotate(360deg);
   }
 }
-@keyframes stop-loader {
+@keyframes stop-loader { /*arret et disparition du loader*/
   to {
     transform: scale(0);
   }
@@ -529,28 +526,41 @@ li {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 20px;
   justify-content: center;
 }
 .gros-titre h1 {
   font-family: "Shrikhand", serif;
   font-size: 1.17rem;
   font-weight: 600;
+  margin: 40px 0px;
 }
 .gros-titre .coeur-vide2 {
   /*rajouté pour le test*/
   font-size: 25px;
-  /*test*/
 }
-.gros-titre .coeur-vide2:hover {
-  background-image: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+.gros-titre .coeur-rempli2 {
+  opacity: 0;
+  transition: all 2s;
+  font-size: 25px;
+}
+.gros-titre .coeur-rempli2:hover {
+  opacity: 1;
+  color: transparent;
+  background-image: linear-gradient(#9356DC, #FF79DA);
   background-clip: text;
   -webkit-background-clip: text;
-  color: transparent;
-  border: none;
-  transition: all 2s;
-  font-weight: 800;
-  font-size: 25px;
+}
+.gros-titre .coeurSuperpose {
+  display: flex;
+  transform: translate(13px, -10px);
+}
+
+.coeur-vide2, .coeur-rempli2 {
+  position: absolute;
+}
+
+.coeur-vide-test, .coeur-rempli-test {
+  position: absolute;
 }
 
 .choixPlat {
@@ -587,7 +597,6 @@ li {
   height: 73px;
   justify-content: space-between;
   margin-bottom: 12px;
-  gap: 50px;
   margin-top: 20px;
 }
 .rectangle2:active .prix {
@@ -623,7 +632,7 @@ li {
 .prix {
   display: flex;
   gap: 20px;
-  margin-right: -65px;
+  margin-right: -91px;
   transition: margin-right 0.8s ease-in-out;
   color: #353535;
 }
@@ -719,7 +728,6 @@ li {
     width: 634px;
   }
   .gros-titre h1 {
-    margin: 40px 0px;
     font-size: 1.75rem;
   }
   .rectangle2 {
@@ -727,6 +735,9 @@ li {
   }
   .rectangle2:hover .prix {
     margin-right: 0px;
+  }
+  .rectangle2 .prix {
+    margin-right: -65px;
   }
 }
 
