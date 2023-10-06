@@ -6,7 +6,6 @@
 
 .main-container {
     width: 100%;
-
  }
 
 
@@ -17,12 +16,11 @@ body {
     padding: 0px;
     width: 100%;
     box-sizing: border-box;
-       
 }
 
 
 
-/********Section du logo********/
+/********************************Section du logo****************************/
 
 .en-tete {
     display: flex;
@@ -37,11 +35,12 @@ body {
             width: 162px;
             height: 44px;
             padding: 0px;
-        
     }
 }
 
-/******Section de la localisation********/
+
+
+/*************************Section de la localisation**********************/
 
 .localisation {
     @include flexMilieu;
@@ -63,7 +62,7 @@ body {
 
 
 
-/******Section de la réservation des menu**********/
+/************************Section de la réservation des menu**********/
 
 .exploration {
     @include flexMilieu;
@@ -86,9 +85,6 @@ body {
         color: #353535;
         font-weight: 300;
     }
-   
-
-
 }
 
 .button {
@@ -109,23 +105,18 @@ body {
         text-decoration: none;
         color:black;
     }
-    
-    
-    // .butoon a:visited{
-    //     text-decoration: none;
-    //     color:inherit;
-    // }
-
+ 
 }
 
 
-/********Section pour le fonctionnement*********/
+/*********************Section pour le fonctionnement************************/
 
 .position-total{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
+
 
 .fonctionnement {
     display: flex;
@@ -154,10 +145,12 @@ body {
       
 }
 
+
 .position-total{
     max-width: 1080px;
     margin:0px auto;
 }
+
 
 .rectangle {
     display: flex;
@@ -194,7 +187,10 @@ body {
     }
 }
 
-/******Section de la presentation des différents restaurants***********/
+
+
+
+/********************Section de la presentation des différents restaurants***********/
 
 .restaurant {
     background-color: $main-bg-color;
@@ -208,7 +204,6 @@ body {
     h1 {
         @include h1;
         display: flex;
-        
     }
    
 }
@@ -216,7 +211,6 @@ body {
 
 .positionRestauTotal{
     max-width: 1040px;
-    
 }
 
 
@@ -228,7 +222,6 @@ body {
     flex-direction: column;
     gap: 30px;
     width: 100%;
-
 }
 
 
@@ -291,7 +284,6 @@ body {
             justify-content: center;
             align-items: center;
             position:absolute;
-           
         }
 }
 
@@ -302,35 +294,23 @@ body {
 }
 
 
-// .positionCadre a:visited{
-//     text-decoration: none;
-//     color:inherit;
-// }
-
-
 .coeur-vide{
-    
     font-size: 25px;
-
-    }
+}
 
 
 .coeur-rempli{    
-   
     opacity: 0;
-    transition: all 2s;
+    color:transparent;
+    transition:opacity 1s;
     font-size: 25px;
     
     &:hover{
-        opacity:1;
-        color:transparent;
+        opacity:1;        
         background-image: linear-gradient(#9356DC, #FF79DA);
         background-clip: text;
         -webkit-background-clip: text;
-        
     }
-
-
 }
 
 
@@ -340,7 +320,6 @@ body {
     right: 58px;
     justify-content: flex-end;
     position:relative;
-
 }
 
 
@@ -368,7 +347,6 @@ footer {
             width: 100%;
             margin-top: 15px;
             margin-bottom: 10px;
-        
         }
 }
 
@@ -379,9 +357,7 @@ ul {
     font-size: 16px;
     font-weight: 500;
     width: 100%;
-    margin: 0px;
-
-   
+    margin: 0px;   
 }
 
 
@@ -431,19 +407,18 @@ li {
                padding-left:80px;
            }
            
-        } 
-
-        
+    } 
+  
 
     .position-rectangle{
         flex-direction:row;
         gap:30px;
         flex-wrap:nowrap;
         justify-content: center;
-                      
-        }
-        
-        .petiteIcone{
+    }
+    
+    
+    .petiteIcone{
         flex-wrap: nowrap;
     }
 
@@ -453,10 +428,12 @@ li {
         flex-wrap: wrap;
         gap: 15px;
     }
+
     
     .positionRestauTotal{
         margin:0px auto;
     }
+
 
     .positionCadre{
         flex-direction: row;
@@ -465,6 +442,7 @@ li {
         gap:30px;
         display: flex;
     }
+
     
     .positionCadre a{
             width:45%;
@@ -476,6 +454,7 @@ li {
         
     }
 
+
     footer{
         height: 54px;
         flex-direction: row-reverse;
@@ -486,15 +465,13 @@ li {
             h3{
                 width: 150px;
             }
-           
     }
 
 
     ul{
         display: flex;
         justify-content: flex-end;
-         align-content: stretch;
-            
+         align-content: stretch;   
     }
 
 
@@ -502,9 +479,7 @@ li {
         gap: 10px;
         justify-content: space-around;
         margin-right: 20px;
-    
     }
-
 }   
 
 
@@ -537,12 +512,14 @@ li {
 
 }
 
+
 .loader::before, .loader::after{
     content: "";
     position: absolute;
     border-radius: 50%;
     border: 7px solid transparent;
 }
+
 
 .loader::before{                                    /*3eme et plus petit cercle*/
     top: 10px;
@@ -551,8 +528,8 @@ li {
     bottom: 10px;
     border-top-color:$colorAnimation;
     animation: spin 3s linear infinite;
-    
 }
+
 
 .loader::after{                                         /*2eme cercle*/
     top: 25px;
@@ -561,9 +538,8 @@ li {
     bottom: 25px;
     border-top-color: #f6f6f6;
     animation: spin 1.5s linear infinite;
-    
-
 }
+
 
 @keyframes spin {                                   /*rotation des cercles*/
     0%{
@@ -573,6 +549,7 @@ li {
         transform: rotate(360deg);
     }
 }
+
 
 @keyframes stop-loader {                            /*arret et disparition du loader*/
     to { transform: scale(0); }
