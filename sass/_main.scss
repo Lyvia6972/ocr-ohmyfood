@@ -17,8 +17,7 @@ body {
     padding: 0px;
     width: 100%;
     box-sizing: border-box;
-    
-    
+       
 }
 
 
@@ -101,22 +100,21 @@ body {
     
     
     &:hover {
-        background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%);
-        
-        
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%); 
        
     }
 
 
     .button a{
         text-decoration: none;
+        color:black;
     }
     
     
-    .butoon a:visited{
-        text-decoration: none;
-        color:inherit;
-    }
+    // .butoon a:visited{
+    //     text-decoration: none;
+    //     color:inherit;
+    // }
 
 }
 
@@ -234,7 +232,6 @@ body {
 }
 
 
-
 .cadre{
     background-color: white;
     border-radius: 15px;
@@ -301,13 +298,14 @@ body {
 
 .positionCadre a{
     text-decoration: none;
+    color:black;
 }
 
 
-.positionCadre a:visited{
-    text-decoration: none;
-    color:inherit;
-}
+// .positionCadre a:visited{
+//     text-decoration: none;
+//     color:inherit;
+// }
 
 
 .coeur-vide{

@@ -96,10 +96,7 @@ body {
 }
 .button .button a {
   text-decoration: none;
-}
-.button .butoon a:visited {
-  text-decoration: none;
-  color: inherit;
+  color: black;
 }
 
 /********Section pour le fonctionnement*********/
@@ -261,11 +258,7 @@ body {
 
 .positionCadre a {
   text-decoration: none;
-}
-
-.positionCadre a:visited {
-  text-decoration: none;
-  color: inherit;
+  color: black;
 }
 
 .coeur-vide {
@@ -535,7 +528,6 @@ li {
   margin: 40px 0px;
 }
 .gros-titre .coeur-vide2 {
-  /*rajouté pour le test*/
   font-size: 25px;
 }
 .gros-titre .coeur-rempli2 {
