@@ -1,13 +1,11 @@
-*{
-//     // box-shadow: 0 0 0 3px red inset;
-        // outline: 1px solid blue;
+* {
+    //     // box-shadow: 0 0 0 3px red inset;
+    // outline: 1px solid blue;
 }
-
 
 .main-container {
     width: 100%;
- }
-
+}
 
 body {
     display: flex;
@@ -18,8 +16,6 @@ body {
     box-sizing: border-box;
 }
 
-
-
 /********************************Section du logo****************************/
 
 .en-tete {
@@ -27,18 +23,16 @@ body {
     align-items: center;
     height: 63px;
     width: 100%;
-    position:relative;
+    position: relative;
     justify-content: center;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 
-        img {
-            width: 162px;
-            height: 44px;
-            padding: 0px;
+    img {
+        width: 162px;
+        height: 44px;
+        padding: 0px;
     }
 }
-
-
 
 /*************************Section de la localisation**********************/
 
@@ -59,9 +53,6 @@ body {
     }
 }
 
-
-
-
 /************************Section de la réservation des menu**********/
 
 .exploration {
@@ -71,12 +62,12 @@ body {
     height: 290px;
     background-color: $main-bg-color;
     font-family: $font-family;
-    padding:0px 10px;
+    padding: 0px 10px;
 
     h1 {
         @include h1;
         margin: 0px;
-        padding:0px 20px;
+        padding: 0px 20px;
     }
 
     p {
@@ -93,39 +84,34 @@ body {
     width: 218px;
     margin-top: 16px;
     transition: background 2s;
-    
-    
+
     &:hover {
-        background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, #9356DC -5.2%, #FF79DA 110.74%); 
-       
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%),
+            linear-gradient(201deg, #9356dc -5.2%, #ff79da 110.74%);
     }
 
-
-    .button a{
+    .button a {
         text-decoration: none;
-        color:black;
+        color: black;
     }
- 
 }
-
 
 /*********************Section pour le fonctionnement************************/
 
-.position-total{
+.position-total {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-
 .fonctionnement {
     display: flex;
     flex-direction: column;
     padding: 30px 30px;
-    gap:30px;
-    position:relative;
+    gap: 30px;
+    position: relative;
     justify-content: center;
-    
+
     h1 {
         @include h1;
         height: 30px;
@@ -134,23 +120,19 @@ body {
     }
 }
 
-
 .position-rectangle {
     display: flex;
     flex-direction: column;
-    left:0px;
-    position:relative;
+    left: 0px;
+    position: relative;
     justify-content: center;
     width: 100%;
-      
 }
 
-
-.position-total{
+.position-total {
     max-width: 1080px;
-    margin:0px auto;
+    margin: 0px auto;
 }
-
 
 .rectangle {
     display: flex;
@@ -183,12 +165,8 @@ body {
         display: flex;
         margin: 0px 15px;
         gap: 20px;
-       
     }
 }
-
-
-
 
 /********************Section de la presentation des différents restaurants***********/
 
@@ -199,21 +177,16 @@ body {
     display: flex;
     text-decoration: none;
     justify-items: center;
-   
 
     h1 {
         @include h1;
         display: flex;
     }
-   
 }
 
-
-.positionRestauTotal{
+.positionRestauTotal {
     max-width: 1040px;
 }
-
-
 
 .positionCadre {
     display: flex;
@@ -224,115 +197,105 @@ body {
     width: 100%;
 }
 
-
-.cadre{
+.cadre {
     background-color: white;
     border-radius: 15px;
- 
-    height:271px;
-    position:relative;
+
+    height: 271px;
+    position: relative;
     justify-content: center;
-   
 
     img {
         width: 100%;
         height: 200px;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
-        object-fit:cover;
-       
+        object-fit: cover;
     }
 
     .conteneur {
-        display:flex;
+        display: flex;
         flex-direction: column;
         width: 100%;
         padding-left: 20px;
-        text-decoration:none;
+        text-decoration: none;
 
         .conteneurTitre {
             @include h2;
             display: flex;
             margin: 0px;
             padding-top: 10px;
-            width:100%;
-            text-decoration:none;
+            width: 100%;
+            text-decoration: none;
         }
 
         .conteneurTexte {
             display: flex;
             margin: 0px;
-            font-family:$font-family;
+            font-family: $font-family;
             font-size: 17px;
             font-weight: 300;
-        }  
+        }
     }
-
 
     .etiquette {
-            display: flex;
-            background-color: $colorAnimation;
-            color: #008766;
-            font-family: $font-family;
-            font-size: 14px;
-            font-weight: 500;
-            width: 80px;
-            height: 29px;
-            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);         
-            right:12px;
-            top:12px;
-            justify-content: center;
-            align-items: center;
-            position:absolute;
-        }
-}
-
-
-.positionCadre a{
-    text-decoration: none;
-    color:black;
-}
-
-
-.coeur-vide{
-    font-size: 25px;
-}
-
-
-.coeur-rempli{    
-    opacity: 0;
-    color:transparent;
-    transition:opacity 1s;
-    font-size: 25px;
-    
-    &:hover{
-        opacity:1;        
-        background-image: linear-gradient(#9356DC, #FF79DA);
-        background-clip: text;
-        -webkit-background-clip: text;
+        display: flex;
+        background-color: $colorAnimation;
+        color: #008766;
+        font-family: $font-family;
+        font-size: 14px;
+        font-weight: 500;
+        width: 80px;
+        height: 29px;
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+        right: 12px;
+        top: 12px;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
     }
 }
 
+.positionCadre a {
+    text-decoration: none;
+    color: black;
+}
 
-.coeurSuperpose2{
-    display:flex;
-    top:20px;
+.coeur-vide {
+    font-size: 25px;
+}
+
+.coeur-rempli {
+    opacity: 0;
+    color: transparent;
+    transition: opacity 2s;
+    font-size: 25px;
+    background-image: linear-gradient(#9356dc, #ff79da);
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.coeurSuperpose2 {
+    display: flex;
+    top: 20px;
     right: 58px;
     justify-content: flex-end;
-    position:relative;
+    position: relative;
 }
 
-
-.coeur-vide, .coeur-rempli{
-    position:absolute;
+.coeur-vide,
+.coeur-rempli {
+    position: absolute;
 }
-
 
 /*****************************Pied de page************************************/
 
 footer {
     background-color: $colorFooter;
-    width: 100%;
     color: white;
     font-family: $font-family;
     padding: 0px 25px 22px 25px;
@@ -340,16 +303,15 @@ footer {
     flex-direction: column;
     align-items: flex-start;
 
-        h3 {
-            font-family: "Shrikhand", serif;
-            font-size: 18px;
-            font-weight: 400;
-            width: 100%;
-            margin-top: 15px;
-            margin-bottom: 10px;
-        }
+    h3 {
+        font-family: "Shrikhand", serif;
+        font-size: 18px;
+        font-weight: 400;
+        width: 100%;
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
 }
-
 
 ul {
     list-style: none;
@@ -357,181 +319,159 @@ ul {
     font-size: 16px;
     font-weight: 500;
     width: 100%;
-    margin: 0px;   
+    margin: 0px;
 }
-
-
 
 li {
     display: flex;
     padding-top: 7px;
     gap: 10px;
-
 }
-
 
 /*.....................Le responsive de le pade d'accueil.............................*/
 
-
-@media screen and (min-width:768px) {
-    
-
-    .en-tete{
-        height:96px;
+@media screen and (min-width: 768px) {
+    .en-tete {
+        height: 96px;
     }
-
 
     .exploration {
         height: 220px;
         padding: 30px 0px;
 
-        h1{
+        h1 {
             font-size: 40px;
         }
 
-        p{
+        p {
             margin-top: 30px;
         }
-
     }
-
 
     .fonctionnement {
-         flex-direction: column;
-         justify-content: center;
-         padding-top: 50px;
-         padding-bottom:50px;
-         padding-left:25px;
-            
-           .fonctionnement.h1{
-               padding-left:80px;
-           }
-           
-    } 
-  
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        padding-left: 25px;
 
-    .position-rectangle{
-        flex-direction:row;
-        gap:30px;
-        flex-wrap:nowrap;
+        .fonctionnement.h1 {
+            padding-left: 80px;
+        }
+    }
+
+    .position-rectangle {
+        flex-direction: row;
+        gap: 30px;
+        flex-wrap: nowrap;
         justify-content: center;
     }
-    
-    
-    .petiteIcone{
+
+    .petiteIcone {
         flex-wrap: nowrap;
     }
 
-    
-    .restaurant{
+    .restaurant {
         justify-content: center;
         flex-wrap: wrap;
         gap: 15px;
     }
 
-    
-    .positionRestauTotal{
-        margin:0px auto;
+    .positionRestauTotal {
+        margin: 0px auto;
     }
 
-
-    .positionCadre{
+    .positionCadre {
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content:space-between;
-        gap:30px;
+        justify-content: space-between;
+        gap: 30px;
         display: flex;
     }
 
-    
-    .positionCadre a{
-            width:45%;
-        }
-    
-   
-    .cadre{                           //cadre des restaurrants de le page d'accueil
-        flex:100;
-        
+    .positionCadre a {
+        width: 45%;
     }
 
+    .cadre {
+        //cadre des restaurrants de la page d'accueil
+        flex: 100;
+    }
 
-    footer{
+    footer {
         height: 54px;
         flex-direction: row-reverse;
         padding: 30px 0px 10px 0px;
         justify-content: flex-end;
-        align-items: center;      
+        align-items: center;
 
-            h3{
-                width: 150px;
-            }
+        h3 {
+            width: 150px;
+        }
     }
 
-
-    ul{
+    ul {
         display: flex;
         justify-content: flex-end;
-         align-content: stretch;   
+        align-content: stretch;
     }
 
-
-    li{
+    li {
         gap: 10px;
         justify-content: space-around;
         margin-right: 20px;
     }
-}   
-
+}
 
 /*-_-_-_-_-_-_-_-Loader_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_*/
 
-.loader-container {                                                 /* Fond gris fonce*/
+.loader-container {
+    /* Fond gris fonce*/
     border-radius: 5px;
     background: #333;
     width: 100vw;
-    height:100vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     position: fixed;
-    z-index:1;
+    z-index: 1;
     opacity: 0.99;
     animation: stop-loader 0.5s 2s forwards;
 }
 
-
-.loader{                                                /*1er cercle*/
+.loader {
+    /*1er cercle*/
     display: block;
     position: absolute;
     width: 250px;
     height: 250px;
     border-radius: 50%;
     border: 7px solid transparent;
-    border-top-color: #9356DC;
+    border-top-color: #9356dc;
     animation: spin 2s linear infinite;
-
 }
 
-
-.loader::before, .loader::after{
+.loader::before,
+.loader::after {
     content: "";
     position: absolute;
     border-radius: 50%;
     border: 7px solid transparent;
 }
 
-
-.loader::before{                                    /*3eme et plus petit cercle*/
+.loader::before {
+    /*3eme et plus petit cercle*/
     top: 10px;
     left: 10px;
     right: 10px;
     bottom: 10px;
-    border-top-color:$colorAnimation;
+    border-top-color: $colorAnimation;
     animation: spin 3s linear infinite;
 }
 
-
-.loader::after{                                         /*2eme cercle*/
+.loader::after {
+    /*2eme cercle*/
     top: 25px;
     left: 25px;
     right: 25px;
@@ -540,19 +480,19 @@ li {
     animation: spin 1.5s linear infinite;
 }
 
-
-@keyframes spin {                                   /*rotation des cercles*/
-    0%{
-        transform: rotate(0deg)
+@keyframes spin {
+    /*rotation des cercles*/
+    0% {
+        transform: rotate(0deg);
     }
-    100%{
+    100% {
         transform: rotate(360deg);
     }
 }
 
-
-@keyframes stop-loader {                            /*arret et disparition du loader*/
-    to { transform: scale(0); }
+@keyframes stop-loader {
+    /*arret et disparition du loader*/
+    to {
+        transform: scale(0);
+    }
 }
-
-
