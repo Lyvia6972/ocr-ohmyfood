@@ -72,7 +72,7 @@
         opacity: 0;
         color: transparent;
         font-size: 25px;
-        transition: opacity 1s ease;
+        transition: opacity 1s;
         background-image: linear-gradient(to top, #9356dc, #ff79da);
         background-clip: text;
         -webkit-background-clip: text;
@@ -131,6 +131,7 @@
     &:hover .prix {
         margin-right: 0px;
     }
+
     &:nth-child(2) {
         animation-delay: 0.5s;
     }
@@ -142,9 +143,7 @@
     &:nth-child(4) {
         animation-delay: 1s;
     }
-
 }
-
 
 .texte {
     display: flex;
@@ -227,23 +226,17 @@
     @include flexMilieu;
     width: 218px;
     margin-top: 16px;
-    transition: background 2s;
     margin-bottom: 30px;
-    display: flex;
-    justify-content: center;
+    // transition: all 2s;
 
     &:hover {
         background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%),
             linear-gradient(201deg, #9356dc -5.2%, #ff79da 110.74%);
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
     }
 
-    .button a {
+    .button2 a {
         text-decoration: none;
-    }
-
-    .butoon a:visited {
-        text-decoration: none;
-        color: black;
     }
 }
 
