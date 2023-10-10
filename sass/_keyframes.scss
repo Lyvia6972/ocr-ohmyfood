@@ -1,0 +1,30 @@
+/*********************animation loader*****************/
+@keyframes spin {
+    /*rotation des cercles*/
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes stop-loader {
+    /*arret et disparition du loader*/
+    to {
+        transform: scale(0);
+    }
+}
+
+/**********************animation menu******************/
+
+@keyframes animMenu {
+    0% {
+        transform: translateY(1.5rem);
+        opacity: 0%;
+    }
+    100% {
+        transform: translate(0);
+        opacity: 100%;
+    }
+}
